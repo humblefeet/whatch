@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 
 var historySchema = new mongoose.Schema({
-    imageId: [{type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
+    images: [{type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
 },{
     timestamp: true
 });
