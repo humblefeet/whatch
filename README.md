@@ -1,8 +1,10 @@
 # whatch
 
-# User stories
+##Trello Board
+https://trello.com/b/UYHJgF70/whatch
 
-##_AAU_
+## User stories
+###_AAU_
 1. Enters main page.
     1. Title is displayed center
     2. Image is displayed
@@ -56,7 +58,7 @@
             * Title
             * Director
             * Release year
-            * Surrounded by <a href=“recommendations/:id/show”>
+            * Surrounded by '<'a'>' tag
 7. Show one
     1. Movie title
     2. Image
