@@ -9,15 +9,16 @@ const passport = require('passport');
 // load the env vars
 require('dotenv').config();
 
-// create the Express app
-var app = express();
-
 // Database connection
 require('./config/database');
 require('./config/passport');
 
 // Define routes
 var index = require('./routes/index');
+var usersRouter = require('./routes/users');
+
+// create the Express app
+var app = express();
 
 
 // View engine setup (accepting default views location)
@@ -40,6 +41,7 @@ app.use(passport.session());
 
 // Mount our routes
 app.use('/', index);
+app.use('/users', usersRouter);
 
 // Start the server listening for incoming requests
 app.listen(3000);
