@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>whatch</title>
+	<title>whatch</title>
 </head>
 <body>
     <nav>
+		<a href="/"><h1>WHATCH</h1></a>
+		<ul class="right">
+			<% if (user) { %>
+				<li><a href="/logout">
+					Logout
+				</a></li>
+			<% } else { %>
+				<li><a href="/auth/google">
+					Login with Google
+				</a></li>
+			<% } %>
+		</ul>
         
