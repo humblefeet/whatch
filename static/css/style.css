@@ -1,6 +1,9 @@
 a{
     text-decoration: none;
 }
+body{
+    margin: 0;
+}
 li{
     list-style: none;
 }
@@ -8,4 +11,21 @@ td{
     border: black solid 2px;
     height: 100px;
     width: 100px;
+}
+nav{
+    overflow: hidden;
+    background-color: #84fff3c9;
+    margin: 0;
+}
+main{
+    width:  500px;
+    text-align: center;
+}
+.brand{
+    float: left;
+}
+nav li{
+    float: right;
+    text-align: center;
+    margin: 10px;
 }
