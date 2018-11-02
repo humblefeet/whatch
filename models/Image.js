@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
+require('mongoose-type-url');
 
 var imageSchema = new mongoose.Schema({
     genres: [{ type: mongoose.Schema.Types.ObjectId, ref:'Genre'}],
-    //source:  we need to determine the source
+    url:  {type: mongoose.SchemaTypes.Url, required: true}
 });
 
 module.exports = mongoose.model('Image', imageSchema);
