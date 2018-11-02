@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/whatch');
+mongoose.connect('mongodb://localhost/whatch',
+{ useNewUrlParser: true }
+);
 
 var con = mongoose.connection;
 

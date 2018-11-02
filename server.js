@@ -20,9 +20,6 @@ require('./config/passport');
 var index = require('./routes/index');
 
 
-// Create the app
-const app = express();
-
 // View engine setup (accepting default views location)
 // app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
