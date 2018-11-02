@@ -8,6 +8,7 @@ const cors = require('cors');
 require('./config/database');
 
 // Define routes
+var index = require('./routes/index');
 
 
 // Create the app
@@ -24,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 app.use(cors());
 
 // Mount our routes
-
+app.use('/', index);
 
 // Start the server listening for incoming requests
 app.listen(3000);
