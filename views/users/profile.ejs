@@ -1,0 +1,10 @@
+<%- include('./partials/header.ejs') %>
+<% if (histories.length > 0) { %>
+	<% histories.forEach(function(history) { %>
+		<%= history.getTimeStamp() %>
+	<% }) %>
+<% } else { %>
+	<h2>No histories to display</h2>
+<% } %>
+
+<%- include('./partials/footer.ejs') %>
