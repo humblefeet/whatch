@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 
-
-
 var historySchema = new mongoose.Schema({
     images: [{type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
 },{

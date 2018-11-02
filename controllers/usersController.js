@@ -1,3 +1,4 @@
+const History = require('../models/History');
 const User = require('../models/User');
 
 module.exports = {
@@ -5,7 +6,7 @@ module.exports = {
 		User.findById(req.params.id).populate('histories').exec(function(err, user) {
 			if (err) return next(err);
 			History.find({}, function(err, histories) {
-				res.render('users/profile', {histories, student});
+				res.render('users/profile', {histories, user});
 			})
 		})
 	}
