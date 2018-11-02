@@ -17,6 +17,7 @@ require('./config/database');
 require('./config/passport');
 
 // Define routes
+var index = require('./routes/index');
 
 
 // View engine setup (accepting default views location)
@@ -38,7 +39,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Mount our routes
-
+app.use('/', index);
 
 // Start the server listening for incoming requests
 app.listen(3000);

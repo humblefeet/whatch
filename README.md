@@ -71,3 +71,5 @@ https://trello.com/b/UYHJgF70/whatch
             * displayed as icons or buttons
             * netflix, hulu, hbogo,  etc.
     7. Here user has an option of saving as a favorite
+
+    ## Should we add a psuedo code to this readme
