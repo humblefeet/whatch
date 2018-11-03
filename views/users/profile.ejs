@@ -2,9 +2,9 @@
 	<div class="history">
 		<h2>Recommendation History</h2>
 		<div>
-			<% if (histories.length > 0) { %>
-				<% histories.forEach(function(history) { %>
-					<%= history.getTimeStamp() %>
+			<% if (user.histories.length > 0) { %>
+				<% user.histories.forEach(function(history) { %>
+					<%= user.history.getTimeStamp() %>
 				<% }) %>
 			<% } else { %>
 				<h2>No histories to display</h2>
