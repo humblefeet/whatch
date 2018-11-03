@@ -1,12 +1,10 @@
 require('./database');
 var Image = require('../models/Image');
-var Genre = require('../models/Genre')
-var History = require('../models/History');
+var Genre = require('../models/Genre');
 
-Promise.all([Image.remove({}), Genre.remove({}), History.remove({})])
+Promise.all([Image.deleteMany({}), Genre.deleteMany({})])
 
 .then(function() {
-	console.log("Creating genre documents...");
 	return Genre.create([
 		{ name: 'Action', genreId: 28 },
 		{ name: 'Adventure', genreId: 12 },
@@ -30,7 +28,6 @@ Promise.all([Image.remove({}), Genre.remove({}), History.remove({})])
 })
 
 .then(function(genres) {
-	console.log("Genres created:\n", genres);
 	return Image.create([
 		{genres: [genres[7]._id, genres[0]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
 		{genres: [genres[0]._id, genres[11]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
@@ -38,15 +35,6 @@ Promise.all([Image.remove({}), Genre.remove({}), History.remove({})])
 		{genres: [genres[11]._id, genres[8]._id, genres[0]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'}
     ])
 })
-
-// .then(function(trainers) {
-// 	console.log("Trainers before populated pokemon:\n", trainers);
-// 	return Trainer.find({}).populate('pokemon').exec();
-// })
-
-// .then(function(trainers) {
-// 	console.log("Trainers with populated Pokemon:\n", JSON.stringify(trainers, null, 2));
-// })
 
 .then(function() {
 	require('mongoose').connection.close();

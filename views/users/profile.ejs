@@ -4,7 +4,7 @@
 		<div>
 			<% if (user.histories.length > 0) { %>
 				<% user.histories.forEach(function(history) { %>
-					<%= user.history.getTimeStamp() %>
+					<%= history %>
 				<% }) %>
 			<% } else { %>
 				<h2>No histories to display</h2>
