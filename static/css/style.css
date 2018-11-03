@@ -20,6 +20,7 @@ nav{
 main{
     width:  500px;
     text-align: center;
+    margin: 4em  auto;
 }
 .brand{
     float: left;
@@ -28,4 +29,26 @@ nav li{
     float: right;
     text-align: center;
     margin: 10px;
+}
+.profile{
+    display: block;
+    width: 30%;
+    height: 50%;
+    border: black 2px solid;
+    float: right;
+    margin: 2em;
+}
+.avatar-profile{
+    height: 30%;
+    width: 90%;
+    border-radius: 50%;
+    background-color: grey;
+
+}
+.history{
+    display: block;
+    border: black 2px solid;
+    width: 50%;
+    margin: 2em;
+    float:  left;
 }

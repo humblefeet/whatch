@@ -1,10 +1,24 @@
 <%- include('../partials/header.ejs') %>
-<% if (histories.length > 0) { %>
-	<% histories.forEach(function(history) { %>
-		<%= history.getTimeStamp() %>
-	<% }) %>
-<% } else { %>
-	<h2>No histories to display</h2>
-<% } %>
+	<div class="history">
+		<h2>Recommendation History</h2>
+		<div>
+			<% if (histories.length > 0) { %>
+				<% histories.forEach(function(history) { %>
+					<%= history.getTimeStamp() %>
+				<% }) %>
+			<% } else { %>
+				<h2>No histories to display</h2>
+			<% } %>
+		</div>
+	</div>
+	<div>
+		<div class="profile">
+				<% if (user.avatar) { %>
+					<img src="<%= user.avatar %>" alt="" class="avatar-profile">&nbsp;&nbsp;
+				<% } else { %>
+					<img class="avatar-profile">img</i>
+				<% } %>
+		</div>
+	</div>
 
 <%- include('../partials/footer.ejs') %>
