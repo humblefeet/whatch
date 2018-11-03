@@ -1,13 +1,15 @@
-const History = require('../models/History');
 const User = require('../models/User');
+const Image = require('../models/Image');
 
 module.exports = {
 	profile: function(req, res, next) {
-		User.findById(req.params.id).populate('histories').exec(function(err, user) {
+		User.findById(req.params.id, function(err, user) {
 			if (err) return next(err);
-			History.find({}, function(err, histories) {
-				res.render('users/profile', {histories, user});
-			})
+			// Image.find({}, function(err, image) {
+			// 	user.histories.push(image._id)
+			// })
+			// user.save();
+			res.render('users/profile', {user})
 		})
 	}
 }
