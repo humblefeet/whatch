@@ -1,10 +1,16 @@
 # whatch
 
-##Trello Board
+## Technologies Used
+* Node
+* Mongo
+* Mongoose
+* Javascript 
+* Html, css 
+## Trello Board
 https://trello.com/b/UYHJgF70/whatch
 
 ## User stories
-###_AAU_
+### _AAU_
 1. Enters main page.
     1. Title is displayed center
     2. Image is displayed
@@ -72,4 +78,4 @@ https://trello.com/b/UYHJgF70/whatch
             * netflix, hulu, hbogo,  etc.
     7. Here user has an option of saving as a favorite
 
-    ## Should we add a psuedo code to this readme
+    
