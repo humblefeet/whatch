@@ -13,12 +13,20 @@
 			<% if (user) { %>
 				<a href="/" class="brand"><h1>WHATCH</h1></a>
 
+				<% if (user.avatar) { %>
+					<a   class="nav-links" href="/users/<%= user._id %>">
+						<img src="<%= user.avatar %>" alt="" class="nav-links">
+					</a>
+				<% } else { %>
+					<a   class="nav-links" href="/users/<%= user._id %>">
+						<li>
+							<%= user.name %>
+						</li>
+					</a>
+				<% } %>
+
 				<li class="nav-links"><a href="/logout">
 					Logout
-				</a></li>
-
-				<li class="nav-links"><a href="/users/<%= user._id %>">
-					<%= user.name %>
 				</a></li>
 
 				<li class="nav-links"><a href="#">
