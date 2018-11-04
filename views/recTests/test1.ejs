@@ -4,7 +4,9 @@
 <table class="movieGrid">
     <tr>
 		<% images.forEach(function(image) { %>
-			<td data-genres="<%= image.genres %>"><img src="<%= image.url %>"></td>
+			<td >
+				<img data-genres="<%= image.genres %>" class='tests'src="<%= image.url %>">
+			</td>
 		<% }) %>
     </tr>
 </table>
