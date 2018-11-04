@@ -16,7 +16,9 @@ require('./config/passport');
 // Define routes
 var index = require('./routes/index');
 var usersRouter = require('./routes/users');
+
 var testsRouter =  require('./routes/test');
+
 var detailsRouter = require('./routes/details')
 
 // create the Express app
