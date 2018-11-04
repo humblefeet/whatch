@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const session = require('express-session');
 const passport = require('passport');
+const User = require('./models/User');
 
 // load the env vars
 require('dotenv').config();
@@ -42,6 +43,16 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(function(req, res, next) {
+	if (req.user) {
+		User.findById(req.user, function(err, user) {
+			req.userModel = user;
+			next();
+		})
+	} else {
+		next();
+	}
+})
 
 // Mount our routes
 app.use('/', index);
