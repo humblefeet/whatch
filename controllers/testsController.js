@@ -3,12 +3,9 @@ var User = require('../models/User');
 
 module.exports = {
     showTest: function(req,res,next){
-        User.findById(req.user, function(err, user){
-			if(err) return next(err);
-			Image.find({}).populate('genres').exec(function(images) {
-				res.render('recTests/test1', {user, images});
-			})
-    	})
+		Image.find({}).populate('genres').exec(function(images) {
+			res.render('recTests/test1', {user: req.userModel, images});
+		})
     }
 }
 
