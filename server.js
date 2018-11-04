@@ -17,6 +17,7 @@ require('./config/passport');
 var index = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testsRouter =  require('./routes/test');
+var detailsRouter = require('./routes/details')
 
 // create the Express app
 var app = express();
@@ -44,6 +45,7 @@ app.use(passport.session());
 app.use('/', index);
 app.use('/users', usersRouter);
 app.use('/tests', testsRouter);
+app.use('/details', detailsRouter);
 
 // Start the server listening for incoming requests
 app.listen(3000);
