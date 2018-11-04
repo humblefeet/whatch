@@ -52,15 +52,19 @@ nav li{
     margin: 2em;
     float:  left;
 }
+
 .movieGrid{
     margin: auto;
+    background-color:  #84fff3c9;
+    border: 1px solid  #84fff3c9;;
     height: auto;
     width: 90%;
     padding: 10px;
     text-align: center;
-}
 
-td{
+}
+ 
+.poster td {
     border-radius: 20%;
     background-color: rgb(206, 168, 122);
     display: inline-block;
