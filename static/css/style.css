@@ -76,3 +76,23 @@ nav li{
     padding: 4px;
     margin: 5px;
 }
+
+.container{
+    display: flex;
+    align-items: stretch;
+    align-content: space-between;
+    width: 80%;
+    
+}
+
+.detail-image{
+    border-radius: 20%;
+    background-color: rgb(206, 168, 122);
+    height: 400px;
+    width: 20em;
+    padding: 4px;
+    margin: 4px;
+    position: relative;
+    left: 5em;
+
+}
