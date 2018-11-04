@@ -1,4 +1,3 @@
-const User = require('../models/User');
 const Image = require('../models/Image');
 
 module.exports = {

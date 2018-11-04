@@ -1,11 +1,12 @@
 var Image = require('../models/Image');
-var User = require('../models/User');
+var Genre = require('../models/Genre');
 
 module.exports = {
     showTest: function(req,res,next){
-		Image.find({}).populate('genres').exec(function(images) {
-			res.render('recTests/test1', {user: req.userModel, images});
-		})
+		Image.find({}).populate('genres').exec()
+			.then(function(images) {
+				res.render('recTests/test1', {user: req.userModel, images});
+			})
     }
 }
 
