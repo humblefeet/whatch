@@ -8,7 +8,7 @@ function imageSelect(){
         image.addEventListener('click', function(e){
             var imageGenres = e.target.dataset.genres;
                 if (clickCheck.includes(imageGenres)){
-                    e.target.style.borderColor = "black";
+                    e.target.parentElement.style.borderColor = "black";
                     clickCount -= 1;
                     var index = genresSelected.indexOf(imageGenres);
                     if (index > -1) {
@@ -16,7 +16,7 @@ function imageSelect(){
                         clickCheck.splice(index,1)
                     }
                 }else{
-                    e.target.style.borderColor = "yellow";
+                    e.target.parentElement.style.borderColor = "yellow";
                     genresSelected.push(imageGenres);
                     clickCheck.push(imageGenres);
                     clickCount += 1
