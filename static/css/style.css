@@ -12,6 +12,9 @@ td{
     height: 100px;
     width: 100px;
 }
+td img {
+	width: 100px;
+}
 nav{
     overflow: hidden;
     background-color: #84fff3c9;
