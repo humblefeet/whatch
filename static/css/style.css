@@ -12,6 +12,9 @@ td{
     height: 100px;
     width: 100px;
 }
+td img {
+	width: 100px;
+}
 nav{
     overflow: hidden;
     background-color: #84fff3c9;
@@ -63,8 +66,8 @@ nav li{
     text-align: center;
 
 }
-
-.poster{
+ 
+.poster td {
     border-radius: 20%;
     background-color: rgb(206, 168, 122);
     display: inline-block;
