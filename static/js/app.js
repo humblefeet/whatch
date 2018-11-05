@@ -15,23 +15,28 @@ function imageSelect(){
                     if (index > -1) {
                         genresSelected.splice(index, 1);
                         clickCheck.splice(index,1)
+                        
                     }
                 }else{
                     e.target.parentElement.style.borderColor = "yellow";
                     genresSelected.push(imageGenres);
                     clickCheck.push(imageGenres);
                     clickCount += 1
+                    return clickCount;
                 }
                 console.log(genresSelected);
+                      
         });
     })
 }
 
-console.log(genresSelected);
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
     imageSelect();
 });
+
 
 /*
 User clicks image
@@ -46,7 +51,9 @@ Limit to 3(?) total images clicked = Still need to implement this
 // after submit bitton is clicked inside that function genre count functions are run
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
+    if (clickCount > 2 && clickCount < 5){
     returnTopTwoGenres(genresSelected);
+    }
 })
 
 
@@ -83,7 +90,7 @@ function returnTopTwoGenres(arr){
   topTwo.forEach(function(arr){
     topGenreIds.push(arr[0])
   })
-  console.log(topGenreIds)
+  console.log(topGenreIds.join())
   return topGenreIds.join(); 
 }
 
