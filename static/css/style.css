@@ -24,7 +24,7 @@ main{
     margin: 4em  auto;
 }
 main.test-page{
-    width: 60%;
+    width: 80%;
     float: right;
 }
 nav li{
@@ -46,10 +46,17 @@ td{
     border: black solid 2px;
     height: 100px;
     width: 100px;
+    display: flex;
+    clear: both;
 }
 
 td > img {
     width: 100%;
+}
+td>img:hover{
+    width: 200%;
+    height: 200%;
+    clear: both;
 }
 
 .profile{
