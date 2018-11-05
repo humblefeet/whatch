@@ -5,8 +5,8 @@ module.exports = {
     showTest: function(req,res,next){
 		Image.find({}).populate('genres').exec()
 			.then(function(images) {
-				var genreIds = ""
 				images.forEach(function(image) {
+					image.genreIds = "";
 					image.genres.forEach(function(genre) {
 						image.genreIds += genre.genreId + ",";
 					})
