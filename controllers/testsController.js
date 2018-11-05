@@ -14,7 +14,7 @@ module.exports = {
 				})
 				res.render('recTests/test1', {user: req.userModel, images});
 			})
-    }	
+    }
 }
 
 // use getAttribute on td element to get the genre IDs for that element
