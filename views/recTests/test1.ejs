@@ -1,14 +1,15 @@
 <%- include ../partials/header.ejs %>
 
-
-<table class="movieGrid">
-    <tr>
-		<% images.forEach(function(image) { %>
-			<td >
-				<img data-genres="<%= image.genreIds %>" class="tests" src="<%= image.url %>">
-			</td>
-		<% }) %>
-    </tr>
-</table>
+<main class='test-page'>
+	<table class="movieGrid">
+			<tr>
+			<% images.forEach(function(image) { %>
+				<td >
+					<img data-genres="<%= image.genreIds %>" class="tests" src="<%= image.url %>">
+				</td>
+			<% }) %>
+			</tr>
+	</table>
+</main>
 
 <%- include ../partials/footer.ejs %>
