@@ -1,38 +1,64 @@
 a{
     text-decoration: none;
 }
+
 body{
     margin: 0;
 }
+
 li{
     list-style: none;
 }
-td{
-    border: black solid 2px;
-    height: 100px;
-    width: 100px;
-}
-td > img {
-    width: 100%;
-}
+
+
 nav{
     overflow: hidden;
-    background-color: #84fff3c9;
+    background-color: #578cff;
     margin: 0;
+    padding: 0;
 }
+
 main{
     width:  500px;
     text-align: center;
     margin: 4em  auto;
 }
-.brand{
-    float: left;
+main.test-page{
+    width: 80%;
+    float: right;
 }
 nav li{
     float: right;
     text-align: center;
     margin: 10px;
+    color: white;
 }
+
+
+a > img{
+    margin:  0;
+    height: 5em;
+    width: 10em;
+}
+
+td{
+    border: black solid 2px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    clear: left;
+}
+
+td > img {
+    width: 100%;
+}
+
+td>img:hover{
+    width: 200%;
+    height: 200%;
+    clear: both;
+}
+
 .profile{
     display: block;
     width: 30%;
@@ -41,13 +67,14 @@ nav li{
     float: right;
     margin: 2em;
 }
+
 .avatar-profile{
     height: 30%;
     width: 90%;
     border-radius: 50%;
     background-color: grey;
-
 }
+
 .history{
     display: block;
     border: black 2px solid;
@@ -58,15 +85,20 @@ nav li{
 
 .movieGrid{
     margin: auto;
-    background-color:  #84fff3c9;
-    border: 1px solid  #84fff3c9;;
     height: auto;
     width: 90%;
     padding: 10px;
     text-align: center;
-
+    border-radius: 5px;
 }
- 
+.nav-avatar{
+    float: right;
+    border:  black 2px solid;
+    border-radius: 5px;
+    max-width: 20%;
+    margin: 0px;
+}
+
 .poster td {
     border-radius: 20%;
     background-color: rgb(206, 168, 122);
@@ -95,4 +127,14 @@ nav li{
     position: relative;
     left: 5em;
 
+}
+
+.brand{
+    float: left;
+    width: 20%;
+}
+
+.logo{
+    height: 10em;
+    width: 100%;
 }

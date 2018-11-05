@@ -32,8 +32,14 @@ Promise.all([Image.deleteMany({}), Genre.deleteMany({})])
 		{genres: [genres[7]._id, genres[0]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
 		{genres: [genres[0]._id, genres[11]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
 		{genres: [genres[5]._id, genres[7]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
-		{genres: [genres[11]._id, genres[8]._id, genres[0]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'}
-    ])
+		{genres: [genres[11]._id, genres[8]._id, genres[0]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
+		{genres: [genres[16]._id, genres[2]._id], url: 'https://imgur.com/jeC17yw.jpg'},
+		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/4t8ftjP.jpg'},
+		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/Jo036UR.jpg'},
+		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/4t8ftjP.jpg'},
+		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/4t8ftjP.jpg'},
+
+	])
 })
 
 .then(function() {

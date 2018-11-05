@@ -9,13 +9,13 @@
 </head>
 <body>
     <nav>
-		<ul class="right">
+		<ul>
 			<% if (user) { %>
-				<a href="/" class="brand"><h1>WHATCH</h1></a>
-
+				<a href="/" class="brand"><img src="/img/whatch.png" alt="logo">
+				</a>
 				<% if (user.avatar) { %>
-					<a   class="nav-links" href="/users/<%= user._id %>">
-						<img src="<%= user.avatar %>" alt="" class="nav-links">
+					<a   class="nav-avatar" href="/users/<%= user._id %>">
+						<img src="<%= user.avatar %>" alt="">
 					</a>
 				<% } else { %>
 					<a   class="nav-links" href="/users/<%= user._id %>">
