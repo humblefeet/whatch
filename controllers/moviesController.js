@@ -3,7 +3,6 @@ const axios = require('axios');
 const base_url = 'https://api.themoviedb.org/3/'
 const api_key = `?api_key=${process.env.TMDB_API_KEY}`
 
-// get by genres
 module.exports = {
 	getAllMovies: function(req, res) {
 		var genres = '18,27,80';
