@@ -9,16 +9,16 @@ module.exports = {
 		var genres = '18,27,80';
 		axios.get(`${base_url}discover/movie${api_key}&with_genres=${genres}`)
 			.then(function(response) {
-				var results = JSON.parse(response.data.results);
-				res.json(results);
+				var movies = response.data.results;
+				res.render('movies/index', {user: req.userModel, movies});
 			})
 	},
 	getOneMovie: function(req, res) {
 		var movie = '18';
 		axios.get(`${base_url}movie/${movie}${api_key}`)
 			.then(function(response) {
-				var result = response.data;
-				res.json(result);
+				var movie = response.data;
+				res.render('movies/show', {user: req.userModel, movie});
 			})
 	}
 }
