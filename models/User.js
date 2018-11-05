@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const historySchema = new Schema({
-    images: [{type: mongoose.Schema.Types.ObjectId, ref: 'Image'}]
+    genres: [{type: mongoose.Schema.Types.ObjectId, ref: 'Genre'}]
 },{
     timestamp: true
 });

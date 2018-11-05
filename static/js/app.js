@@ -25,7 +25,6 @@ function imageSelect(){
                     return clickCount;
                 }
                 console.log(genresSelected);
-                      
         });
     })
 }
@@ -58,40 +57,39 @@ document.getElementById('submitButton').addEventListener("click",function(){
 
 
 function returnTopTwoGenres(arr){
-  let newArr = []
-  arr.forEach(function(id){
-  newArr.push(id.split(','))
-  })
-  var merged = [].concat.apply([], newArr);
-  let obj ={}
-  merged.forEach(function(genre){
-    if (genre in obj){
-      obj[genre] = obj[genre]+= 1;
-    }else{
-      obj[genre] = 1; 
-    }
-  });
-  //return obj;
-  	var sortable=[];
+	let newArr = []
+	arr.forEach(function(id){
+		newArr.push(id.split(','))
+	})
+	var merged = [].concat.apply([], newArr);
+	let obj ={}
+	merged.forEach(function(genre){
+    	if (genre in obj){
+    		obj[genre] = obj[genre]+= 1;
+    	}else{
+    		obj[genre] = 1; 
+		}
+	});
+	//return obj;
+	var sortable=[];
 	for(var key in obj)
 		if(obj.hasOwnProperty(key))
 			sortable.push([key, obj[key]]); 
 	sortable.sort(function(a, b)
 	{
-      return b[1]-a[1];
-      console.log(b[1]-a[1]);
- 
+    	return b[1]-a[1];
+    	console.log(b[1]-a[1]);
 	});
 	var topTwo = []
 	for(let i=0; i < 2; i++ ){
-    topTwo.push(sortable[i]);
-  }
-  var topGenreIds = []
-  topTwo.forEach(function(arr){
-    topGenreIds.push(arr[0])
-  })
-  console.log(topGenreIds.join())
-  return topGenreIds.join(); 
+    	topTwo.push(sortable[i]);
+	}
+	var topGenreIds = []
+	topTwo.forEach(function(arr){
+    	topGenreIds.push(arr[0])
+	})
+	console.log(topGenreIds.join())
+	return topGenreIds.join(); 
 }
 
 
