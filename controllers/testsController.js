@@ -5,9 +5,15 @@ module.exports = {
     showTest: function(req,res,next){
 		Image.find({}).populate('genres').exec()
 			.then(function(images) {
+				var genreIds = ""
+				images.forEach(function(image) {
+					image.genres.forEach(function(genre) {
+						image.genreIds += genre.genreId + ",";
+					})
+				})
 				res.render('recTests/test1', {user: req.userModel, images});
 			})
-    }
+    }	
 }
 
 // use getAttribute on td element to get the genre IDs for that element
