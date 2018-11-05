@@ -51,7 +51,7 @@ Limit to 3(?) total images clicked = Still need to implement this
 // after submit bitton is clicked inside that function genre count functions are run
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
-    if (clickCount > 2){
+    if (clickCount > 2 && clickCount < 5){
     returnTopTwoGenres(genresSelected);
     }
 })
