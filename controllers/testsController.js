@@ -9,7 +9,6 @@ module.exports = {
 				images.forEach(function(image) {
 					image.genres.forEach(function(genre) {
 						image.genreIds += genre.genreId + ",";
-						console.log(image.genreIds);
 					})
 				})
 				res.render('recTests/test1', {user: req.userModel, images});
