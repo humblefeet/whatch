@@ -15,7 +15,7 @@ module.exports = {
 			})
 	},
 	getOneMovie: function(req, res) {
-		var movie = '18';
+		var movie = req.params.id;
 		axios.get(`${base_url}movie/${movie}${api_key}`)
 			.then(function(response) {
 				var movie = response.data;

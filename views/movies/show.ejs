@@ -1,19 +1,10 @@
 <%- include ../partials/header.ejs %>
 <main class="container">
     <div >
-        <h1>Title You've Selected</h1>
-        <div>
-            <p>This is where the details go</p>
-        </div>
-        <p>
-            This is where a foreach will go to create our recomended sight
-            to find a movie
-        </p>
-        <div>
-            <p>this is where the move should display</p>
-        </div>
+        <h1><%= movie.title %></h1>
+		<p><%= movie.overview %></p>
     </div>
-<img src="https://i.imgur.com/qeRhrN3.jpg" alt="Movie image" class="detail-image">
+	<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="detail-image">
 
 
 
