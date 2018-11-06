@@ -2,36 +2,12 @@
 
 
 <body>
-    <h1> foreach can go over first div from test page</h1>
-
     <main class="movieGrid">
         <div>
-            <a href="#" >
-                <img src="https://i.imgur.com/LrpdQYY.jpg" alt="should be an image" class="poster">
-            </a>
-            <a href="#" >
-                <img src="https://i.imgur.com/CfgC2PH.jpg" alt="should be an image" class="poster">
-            </a>
-            <a href="#" >
-                    <img src="https://i.imgur.com/gbp2oqx.jpg" alt="should be an image" class="poster">
-            </a>
-            <a href="#" >
-                <img src="https://i.imgur.com/PDEWvSd.jpg" alt="should be an image" class="poster">
-            </a>
-        </div>
-        <div>
-            <a href="#" >
-                <img src="https://i.imgur.com/6C7rswj.jpg" alt="should be an image" class="poster">
-            </a>
-            <a href="#" >
-                <img src="https://i.imgur.com/r8yesVi.jpg" alt="should be an image" class="poster">
-            </a>
-            <a href="#" >
-                <img src="https://i.imgur.com/hGGQHko.jpg" alt="should be an image" class="poster">
-            </a>
-            <a href="#" >
-                <img src="https://i.imgur.com/qeRhrN3.jpg" alt="should be an image" class="poster">
-            </a>
+			<% movies.forEach(function(movie) { %>
+				<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
+				<a href="/movies/<%=movie.id%>"><h1><%= movie.title %></h1></a>
+			<% })%>
         </div>
     </main>
     <footer>Photo by Lee Aik Soon on Unsplash, Photo by Kid Circus on Unsplash</footer>
