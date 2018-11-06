@@ -7,8 +7,7 @@ module.exports = {
 	newHistory: function(req, res, next) {
 		var user = req.userModel;
 		var newHistory = {
-			// images: "test"
-			// update this with the correct data from the front
+			genres: ""
 		}
 		user.histories.push(newHistory);
 		user.save(function(err) {
