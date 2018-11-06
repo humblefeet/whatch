@@ -45,19 +45,14 @@ td{
     border: black solid 2px;
     height: 100px;
     width: 100px;
-    display: flex;
-    clear: left;
+    display: inline-flex;
+    clear: both;
 }
 
 td > img {
     width: 100%;
 }
 
-td>img:hover{
-    width: 200%;
-    height: 200%;
-    clear: both;
-}
 
 .profile{
     display: block;
@@ -137,4 +132,12 @@ td>img:hover{
 .logo{
     height: 10em;
     width: 100%;
+}
+
+.selected{
+    border: 2px solid rgb(252, 255, 102);
+}
+
+.unselected{
+    border: 0px;
 }
