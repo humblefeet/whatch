@@ -12,7 +12,7 @@ module.exports = {
 		user.histories.push(newHistory);
 		user.save(function(err) {
 			if (err) return next(err);
-			res.redirect('/users/' + user._id);
+			res.redirect('/movies');
 		})
 	}
 }
