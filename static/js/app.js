@@ -1,8 +1,7 @@
 var testImages =  document.querySelectorAll('.tests');  
 var submitButton = document.getElementById('submitButton');
 var genresSelected = [];
-var clickCheck = [];
-var clickCount = 0;
+
 
 function  selectImage(e){
     var el = e.target;
@@ -12,12 +11,10 @@ function  selectImage(e){
         var index = genresSelected.indexOf(imageData);
         if (index > -1) {
             genresSelected.splice(index, 1);
-            clickCheck.splice(index,1)
         }
     }else{
         el.classList.toggle('selected');
         genresSelected.push(imageData);
-        clickCheck.push(imageData);
     }
     console.log(genresSelected);
 }

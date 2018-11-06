@@ -142,7 +142,7 @@ a > img{
 }
 
 .selected{
-    border: 15px solid rgb(255, 8, 8);
+    border: 8px solid rgb(255, 241, 42);
 }
 
 .unselected{
