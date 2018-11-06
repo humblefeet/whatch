@@ -7,7 +7,7 @@ module.exports = {
 	newHistory: function(req, res, next) {
 		var user = req.userModel;
 		var newHistory = {
-			genres: ""
+			genres: req.body.genres
 		}
 		user.histories.push(newHistory);
 		user.save(function(err) {

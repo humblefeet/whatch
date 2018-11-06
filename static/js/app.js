@@ -42,7 +42,7 @@ Limit to 3(?) total images clicked = Still need to implement this
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
     console.log('clicked')
-    if (clickCount > 2 && clickCount < 5){
+    if (genresSelected.length > 2 && genresSelected.length <= 5){
         console.log(genresSelected)
     returnTopTwoGenres(genresSelected);
     }
@@ -84,8 +84,12 @@ function returnTopTwoGenres(arr){
   })
   topGenreIds = topGenreIds.join();
   console.log('top returned', topGenreIds)
-  return topGenreIds; 
-  
+  var form = document.getElementById('imageForm');
+  var input = document.createElement('input');
+  input.type = 'hidden';
+  input.name = 'genres';
+  input.value = topGenreIds;
+  form.appendChild(input);
 }
 
 

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const historySchema = new Schema({
     genres: String
 },{
-    timestamp: true
+    timestamps: true
 });
 
 const userSchema = new Schema({
