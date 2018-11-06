@@ -4,12 +4,25 @@ a{
 
 body{
     margin: 0;
+    background-color: rgb(200, 200, 200);
+    padding: 0;
 }
 
 li{
     list-style: none;
 }
+.column{
+    float: left;
+    width: 100%;
+    padding: 5px;
+}
 
+/* Clear floats after image containers */
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
 
 nav{
     overflow: hidden;
@@ -41,23 +54,12 @@ a > img{
     width: 10em;
 }
 
-td{
+.tests{
     border: black solid 2px;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    clear: left;
+    width: 32%;
+    height: auto;
 }
 
-td > img {
-    width: 100%;
-}
-
-td>img:hover{
-    width: 200%;
-    height: 200%;
-    clear: both;
-}
 
 .profile{
     display: block;
@@ -137,4 +139,12 @@ td>img:hover{
 .logo{
     height: 10em;
     width: 100%;
+}
+
+.selected{
+    border: 15px solid rgb(255, 8, 8);
+}
+
+.unselected{
+    border: 0px;
 }
