@@ -14,8 +14,8 @@
 				<a href="/" class="brand"><img src="/img/whatch.png" alt="logo">
 				</a>
 				<% if (user.avatar) { %>
-					<a   class="nav-avatar" href="/users/<%= user._id %>">
-						<img src="<%= user.avatar %>" alt="">
+					<a  href="/users/<%= user._id %>">
+						<img src="<%= user.avatar %>" class="nav-avatar">
 					</a>
 				<% } else { %>
 					<a   class="nav-links" href="/users/<%= user._id %>">
