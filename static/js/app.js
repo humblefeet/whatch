@@ -44,7 +44,9 @@ Limit to 3(?) total images clicked = Still need to implement this
 // after submit bitton is clicked inside that function genre count functions are run
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
+    console.log('clicked')
     if (clickCount > 2 && clickCount < 5){
+        console.log(genresSelected)
     returnTopTwoGenres(genresSelected);
     }
 })
@@ -72,7 +74,7 @@ function returnTopTwoGenres(arr){
 	sortable.sort(function(a, b)
 	{
       return b[1]-a[1];
-      console.log(b[1]-a[1]);
+    //   console.log(b[1]-a[1]);
  
 	});
 	var topTwo = []
@@ -83,8 +85,10 @@ function returnTopTwoGenres(arr){
   topTwo.forEach(function(arr){
     topGenreIds.push(arr[0])
   })
-  console.log(topGenreIds.join())
-  return topGenreIds.join(); 
+  topGenreIds = topGenreIds.join();
+  console.log('top returned', topGenreIds)
+  return topGenreIds; 
+  
 }
 
 

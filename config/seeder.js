@@ -34,9 +34,19 @@ Promise.all([Image.deleteMany({}), Genre.deleteMany({})])
 		{genres: [genres[16]._id, genres[2]._id], url: 'https://imgur.com/jeC17yw.jpg'},
 		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/4t8ftjP.jpg'},
 		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/Jo036UR.jpg'},
+		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/4t8ftjP.jpg'},
+		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/4t8ftjP.jpg'},
+		{genres: [genres[3]._id, genres[4]._id], url:'https://i.imgur.com/r8yesVi.jpg'},
+		{genres: [genres[11]._id, genres[7]._id], url:'https://i.imgur.com/gOgueqR.jpg'},
+		{genres: [genres[15]._id, genres[0]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
+		{genres: [genres[1]._id, genres[8]._id], url:'https://i.imgur.com/6C7rswj.jpg'},
+		{genres: [genres[7]._id, genres[3]._id], url:'https://i.imgur.com/PDEWvSd.jpg'},
+		{genres: [genres[13]._id, genres[8]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
+		{genres: [genres[12]._id, genres[8]._id], url:'https://i.imgur.com/gbp2oqx.jpg'},
+		{genres: [genres[10]._id, genres[15]._id], url:'https://i.imgur.com/CfgC2PH.jpg'},
+		{genres: [genres[1]._id, genres[8]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
 		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/ALpAA31.jpg'},
 		{genres: [genres[1]._id, genres[5]._id], url:'https://imgur.com/Ba5QywC.jpg'}
-
 	])
 })
 
