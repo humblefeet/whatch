@@ -7,11 +7,11 @@
 				<img data-genres="<%= image.genreIds %>" class="tests" src="<%= image.url %>">
 		<% }) %>
 	</div>
-		<form method="POST" action="/users/<%= user._id %>/histories">
-			<input type="submit" value="Go!">
+		<form method="POST" action="/users/<%= user._id %>/histories" id="imageForm">
+			<button id="submitButton">Submit Selections</button>
 		</form>
 </div>
 
-<button id="submitButton">Submit Selections</button>
+
 
 <%- include ../partials/footer.ejs %>

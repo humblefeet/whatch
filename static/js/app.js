@@ -11,7 +11,7 @@ function  selectImage(e){
     }else{
         canTest = false;
     }
-    if (el.classList.contains('selected') && !canTest){
+    if (el.classList.contains('selected') && canTest){
         el.classList.toggle('unselected');
         var index = genresSelected.indexOf(imageData);
         if (index > -1) {
@@ -23,6 +23,9 @@ function  selectImage(e){
     }
     console.log(genresSelected);
 }
+/*
+Limit total images clicked = Still trying to implement this
+*/
 
 
 
@@ -33,21 +36,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 
-/*
-User clicks image
-Image is highlighted
-Image genre(s) added to array
-If clicked again, image is unhighlighted
-Image's genre(s) removed from array
-Limit to 3(?) total images clicked = Still need to implement this
-*/
-
-
 // after submit bitton is clicked inside that function genre count functions are run
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
     console.log('clicked')
-    if (genresSelected.length > 2 && genresSelected.length < 5){
+    if (genresSelected.length > 2 && genresSelected.length <= 5){
         console.log(genresSelected)
     returnTopTwoGenres(genresSelected);
     }
@@ -87,7 +80,12 @@ function returnTopTwoGenres(arr){
     })
     topGenreIds = topGenreIds.join();
     console.log('top returned', topGenreIds)
-    return topGenreIds; 
+    var form = document.getElementById('imageForm');
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'genres';
+    input.value = topGenreIds;
+    form.appendChild(input);
 }
 
 

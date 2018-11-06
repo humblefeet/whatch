@@ -19,9 +19,9 @@ li{
 
 /* Clear floats after image containers */
 .row::after {
-content: "";
-clear: both;
-display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 nav{
@@ -96,9 +96,8 @@ a > img{
 .nav-avatar{
     float: right;
     border:  black 2px solid;
-    border-radius: 5px;
-    max-width: 20%;
-    margin: 0px;
+    border-radius: 50px;
+    margin: 5px;
 }
 
 .poster td {
