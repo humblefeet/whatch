@@ -1,12 +1,17 @@
 var testImages =  document.querySelectorAll('.tests');  
 var submitButton = document.getElementById('submitButton');
 var genresSelected = [];
-
+var canTest = false;
 
 function  selectImage(e){
     var el = e.target;
     var imageData = el.dataset.genres;
-    if (el.classList.contains('selected')){
+    if(genresSelected.length > 2 && genresSelected.length <= 5){
+        canTest = true;
+    }else{
+        canTest = false;
+    }
+    if (el.classList.contains('selected') && !canTest){
         el.classList.toggle('unselected');
         var index = genresSelected.indexOf(imageData);
         if (index > -1) {
@@ -42,7 +47,7 @@ Limit to 3(?) total images clicked = Still need to implement this
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
     console.log('clicked')
-    if (clickCount > 2 && clickCount < 5){
+    if (genresSelected.length > 2 && genresSelected.length < 5){
         console.log(genresSelected)
     returnTopTwoGenres(genresSelected);
     }
