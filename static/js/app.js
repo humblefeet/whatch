@@ -81,15 +81,15 @@ function returnTopTwoGenres(arr){
     var topGenreIds = []
     topTwo.forEach(function(arr){
     topGenreIds.push(arr[0])
-  })
-  topGenreIds = topGenreIds.join();
-  console.log('top returned', topGenreIds)
-  var form = document.getElementById('imageForm');
-  var input = document.createElement('input');
-  input.type = 'hidden';
-  input.name = 'genres';
-  input.value = topGenreIds;
-  form.appendChild(input);
+    })
+    topGenreIds = topGenreIds.join();
+    console.log('top returned', topGenreIds)
+    var form = document.getElementById('imageForm');
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'genres';
+    input.value = topGenreIds;
+    form.appendChild(input);
 }
 
 
