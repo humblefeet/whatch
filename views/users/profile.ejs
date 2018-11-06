@@ -4,7 +4,8 @@
 		<div>
 			<% if (user.histories.length > 0) { %>
 				<% user.histories.forEach(function(history) { %>
-					<%= history %>
+					<p>Recommendations From: <%= history.createdAt.toDateString() %></p>
+					<p>Genres Selected: <%= history.genres %></p>
 				<% }) %>
 			<% } else { %>
 				<h2>No histories to display</h2>
