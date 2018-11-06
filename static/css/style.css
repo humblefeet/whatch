@@ -133,3 +133,11 @@ td > img {
     height: 10em;
     width: 100%;
 }
+
+.selected{
+    border: 2px solid rgb(252, 255, 102);
+}
+
+.unselected{
+    border: 0px;
+}

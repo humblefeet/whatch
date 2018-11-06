@@ -4,38 +4,31 @@ var genresSelected = [];
 var clickCheck = [];
 var clickCount = 0;
 
-function imageSelect(){
-    testImages.forEach(function(image){
-        image.addEventListener('click', function(e){
-            var imageGenres = e.target.dataset.genres;
-                if (clickCheck.includes(imageGenres)){
-                    e.target.parentElement.style.borderColor = "black";
-                    clickCount -= 1;
-                    var index = genresSelected.indexOf(imageGenres);
-                    if (index > -1) {
-                        genresSelected.splice(index, 1);
-                        clickCheck.splice(index,1)
-                        
-                    }
-                }else{
-                    e.target.parentElement.style.borderColor = "yellow";
-                    genresSelected.push(imageGenres);
-                    clickCheck.push(imageGenres);
-                    clickCount += 1
-                    return clickCount;
-                }
-                console.log(genresSelected);
-                      
-        });
-    })
+function  selectImage(e){
+    var el = e.target;
+    var imageData = el.dataset.genres;
+    if (el.classList.contains('selected')){
+        el.classList.toggle('unselected');
+        var index = genresSelected.indexOf(imageData);
+        if (index > -1) {
+            genresSelected.splice(index, 1);
+            clickCheck.splice(index,1)
+        }
+    }else{
+        el.classList.toggle('selected');
+        genresSelected.push(imageData);
+        clickCheck.push(imageData);
+    }
+    console.log(genresSelected);
 }
 
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
-    imageSelect();
-});
+    testImages.forEach(function(image){
+        image.addEventListener('click', selectImage);
+    });
+})
 
 
 /*
