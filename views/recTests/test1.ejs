@@ -1,18 +1,16 @@
 <%- include ../partials/header.ejs %>
 
 
-<table class="movieGrid">
-    <tr>
+<div class="row">
+	<div class="column">
 		<% images.forEach(function(image) { %>
-			<td >
 				<img data-genres="<%= image.genreIds %>" class="tests" src="<%= image.url %>">
-			</td>
 		<% }) %>
+	</div>
 		<form method="POST" action="/users/<%= user._id %>/histories">
 			<input type="submit" value="Go!">
 		</form>
-    </tr>
-</table>
+</div>
 
 <button id="submitButton">Submit Selections</button>
 
