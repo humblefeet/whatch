@@ -4,23 +4,15 @@
 		<h1><%= movie.title %></h1>
 		<h3>About This Movie</h3>
 		<p><%= movie.overview %></p>
+
 		<% if (providers.length > 0) { %>
-			
+			<h3>Currently Streaming On</h3>
 			<% providers.forEach(function(provider) { %>
-				<% if (provider == 'Netflix' || provider == 'Amazon Prime Video' || provider == 'Hulu') {%>
-					<h3>Currently Showing On</h3>
-					<!-- <% if (provider == 'Netflix') { %>			
-						<img src="https://i.imgur.com/UfgOEwx.jpg"  alt="Netflix" class="provider-icons">
-					<% } %>	 -->
-					<% if (provider == 'Amazon Prime Video') { %>
-						<img src="https://i.imgur.com/FmiDvyI.jpg"  alt="Amazon Prime Video" class="provider-icons">
-					<% } %>	
-					<% if (provider == 'Hulu') { %>
-						<img src="https://i.imgur.com/2pHET9b.png"  alt="Hulu" class="provider-icons">
-					<% } %>	
-				<% } %>	
+				<div class="provider-icons <%= provider %>"></div>
 			<% }) %>
-		<% } %>
+		<% }else { %>
+			<h3>Not Currently Streaming On Netflix, Hulu, or Amazon</h3>
+		<%}%>
 		
 		
 		

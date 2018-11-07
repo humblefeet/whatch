@@ -194,8 +194,19 @@ html { overflow-y: scroll; }
 }
 
 .provider-icons{
+    background-size: cover;
     display: inline-block;
     height: 4em;
     width: 4em;
     border-radius: 5px;
+}
+.netflix{
+    background-image: url("https://i.imgur.com/UfgOEwx.jpg");
+}
+.hulu{
+    background-image: url("https://i.imgur.com/2pHET9b.png");
+}
+.amazon{
+    background-image: url("https://i.imgur.com/FmiDvyI.jpg");
+
 }

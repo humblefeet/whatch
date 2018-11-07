@@ -1,6 +1,9 @@
 # whatch
 
+
 ## Technologies Used
+* Just Watch API
+* OMDb API
 * Node
 * Mongo
 * Mongoose
