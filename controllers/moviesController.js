@@ -24,20 +24,23 @@ module.exports = {
 					.then(function(results) {
 						var result = results.items[0];
 						var offers = result.offers;
-						console.log(offers);
-						var providers = [];
+						var providers = {};
 						offers.forEach(function(provider) {
-							// if provider_id == 
-								// 8 - netflix
-								// 9 - amazon
-								// 10 - amazon-instant-video
-								// 15 - hulu
-								// 119 - amazon-prime-video
-							// same provider name to providers array and return result to res.render
+							provider = provider.provider_id.toString();
+							console.log(provider);
+							if (!providers.hasOwnProperty(provider)) {
+								if (provider == "8") {
+									providers[provider] = "Netflix";
+								} else if (provider == "15") {
+									providers[provider] = "Hulu";
+								} else if (provider == "119") {
+									providers[provider] = "Amazon Prime Video";
+								}	
+							}
 						})
+						providers = Object.values(providers);
+						res.render('movies/show', {user: req.userModel, movie, providers});
 					})
-					
-				res.render('movies/show', {user: req.userModel, movie});
 			})
 	}
 }
