@@ -110,9 +110,9 @@ nav li{
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 30em;
-    width: 30%;
-    padding: 4px;
-    margin: 5px;
+    width: 20em;
+    padding: 3px;
+    margin: 10px;
 }
 
 .poster:hover{
