@@ -1,4 +1,4 @@
-var testImages =  document.querySelectorAll('.tests');  
+var testImages =  document.querySelectorAll('.polaroid');  
 var submitButton = document.getElementById('submitButton');
 var genresSelected = [];
 var canTest = false;
