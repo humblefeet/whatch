@@ -87,13 +87,14 @@ nav li{
     float:  left;
 }
 
-.movieGrid{
+.movie-grid{
     margin: auto;
     height: auto;
     width: 90%;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
+    text-align: center;
 }
 
 .nav-avatar{
@@ -111,7 +112,7 @@ nav li{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 30em;
     width: 20em;
-    padding: 3px;
+    padding: 4px;
     margin: 10px;
 }
 
