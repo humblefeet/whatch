@@ -169,3 +169,42 @@ nav li{
     border: 0px;
 }
 
+<<<<<<< HEAD
+=======
+/* Masonry test page */
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+/* clear fix */
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+/*  need to fix column element*/
+
+.row-resizer,
+.column-item {
+    width: 33.333%;
+}
+
+.column-item {
+    float: left;
+}
+
+.column-item img {
+    display: block;
+    width: 100%;
+}
+
+.provider-icons{
+    display: inline-block;
+    height: 4em;
+    width: 4em;
+    border-radius: 5px;
+}
+>>>>>>> f98771d863c5abd04ae939310db76ecebe0b6edf
