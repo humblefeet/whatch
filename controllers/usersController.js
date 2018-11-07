@@ -54,22 +54,23 @@ module.exports = {
 				jw.search({query: movie.title})
 					.then(function(results) {
 						var result = results.items[0];
-						var offers = result.offers;
-						var providers = {};
+						var offers = new Set(result.offers.map( o => o.provider_id));
+						var providers = [];
 						offers.forEach(function(provider) {
-							provider = provider.provider_id.toString();
-							console.log(provider);
-							if (!providers.hasOwnProperty(provider)) {
-								if (provider == "8") {
-									providers[provider] = "Netflix";
-								} else if (provider == "15") {
-									providers[provider] = "Hulu";
-								} else if (provider == "119") {
-									providers[provider] = "Amazon Prime Video";
-								}	
+							switch(provider){
+								case 8:
+									providers.push('netflix');
+									break;
+								case 15:
+									providers.push('hulu');
+									break;
+								case 119:
+									providers.push('amazon');
+									break;
+								default:
+									console.log("this isn't working");
 							}
 						})
-						providers = Object.values(providers);
 						res.render('users/movies/show', {user: req.userModel, movie, providers});
 					})
 			})

@@ -169,8 +169,7 @@ nav li{
     border: 0px;
 }
 
-<<<<<<< HEAD
-=======
+
 /* Masonry test page */
 * { box-sizing: border-box; }
 
@@ -202,9 +201,21 @@ html { overflow-y: scroll; }
 }
 
 .provider-icons{
+    background-size: cover;
     display: inline-block;
     height: 4em;
     width: 4em;
     border-radius: 5px;
 }
->>>>>>> f98771d863c5abd04ae939310db76ecebe0b6edf
+
+.netflix{
+    background-image: url("https://i.imgur.com/UfgOEwx.jpg");
+}
+.hulu{
+    background-image: url("https://i.imgur.com/2pHET9b.png");
+}
+.amazon{
+    background-image: url("https://i.imgur.com/FmiDvyI.jpg");
+
+}
+
