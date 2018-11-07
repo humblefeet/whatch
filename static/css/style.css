@@ -134,6 +134,7 @@ nav li{
 }
 
 .detail-image{
+    border: 2px rgb(206, 168, 122);
     border-radius: 10%;
     height: 30em;
     width: 30%;
@@ -161,7 +162,7 @@ nav li{
 
 .selected{
     box-sizing: border-box;
-    border: 8px solid rgb(255, 241, 42);
+    box-shadow: 0 4px 8px 0 rgba(255, 241, 42), 0 6px 20px 0 rgba(255, 241, 42);
 }
 
 .unselected{
