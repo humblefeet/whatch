@@ -3,6 +3,12 @@
     <div >
         <h1><%= movie.title %></h1>
 		<p><%= movie.overview %></p>
+		<% if (providers.length > 0) { %>
+			Where to Watch:
+			<% providers.forEach(function(provider) { %>
+				<p><%= provider %></p>
+			<% }) %>
+		<% } %>
     </div>
 	<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="detail-image">
 
