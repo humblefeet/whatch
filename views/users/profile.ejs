@@ -6,7 +6,7 @@
 				<% user.histories.forEach(function(history) { %>
 					<p>
 						<a href="/users/<%= user.id %>/histories/<%= history.id %>/movies">
-						<%= history.createdAt.toDateString() %>
+						<%= history.createdAt.toDateString() %><a href="/users/<%= user.id %>/histories/<%= history.id %>/delete">  (Delete)</a>
 						</a>
 					</p>
 				<% }) %>

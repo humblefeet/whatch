@@ -21,6 +21,15 @@ module.exports = {
 		var history = user.histories[user.histories.length-1];
 		res.redirect('/users/' + user._id + '/histories/' + history._id + '/movies');
 	},
+	removeHistory: function(req, res, next) {
+		var user = req.userModel;
+		var userHistories = user.histories;
+		var historyToRemove = userHistories.id(req.params.hid);
+		userHistories.splice(historyToRemove, 1);
+		user.save(function(err) {
+			res.redirect('/users/' + user._id);
+		})
+	},
 	getMovies: function(req, res) {
 		var user = req.userModel;
 		var newHistory = "";
