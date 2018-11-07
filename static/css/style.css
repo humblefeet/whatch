@@ -195,6 +195,7 @@ html { overflow-y: scroll; }
 
 .provider-icons{
     display: inline-block;
-    height: 3em;
-    width: 3em;
+    height: 4em;
+    width: 4em;
+    border-radius: 5px;
 }
