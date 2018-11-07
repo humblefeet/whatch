@@ -4,6 +4,7 @@
 		<div>
 			<% if (user.histories.length > 0) { %>
 				<% user.histories.forEach(function(history) { %>
+					<p><%= history.id %></p>
 					<p>Recommendations From: <%= history.createdAt.toDateString() %></p>
 					<p>Genres Selected: <%= history.genres %></p>
 				<% }) %>
