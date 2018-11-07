@@ -4,12 +4,13 @@
 <body>
     <main class="movie-grid">
         <div>
-			<% movies.forEach(function(movie) { %>
+            <% movies.forEach(function(movie) { %>
+                <a href="/movies/<%=movie.id%>">
 				<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
-				<a href="/movies/<%=movie.id%>"><h1><%= movie.title %></h1></a>
+                <!-- <h1><%= movie.title %></h1> -->
+                </a>
 			<% })%>
         </div>
     </main>
-    <footer>Photo by Lee Aik Soon on Unsplash, Photo by Kid Circus on Unsplash</footer>
     
 <%- include ../partials/footer.ejs %>
