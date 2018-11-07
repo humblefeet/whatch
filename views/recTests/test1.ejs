@@ -1,8 +1,9 @@
 <%- include ../partials/header.ejs %>
 
-<div class="row">
 	<h1>Select 3 - 5 images</h1>
-
+	
+	<div class="row">
+		<div class="row-resizer"></div>
 	<div class="column">
 		<% images.forEach(function(image) { %>
 				<img data-genres="<%= image.genreIds %>" class="tests" src="<%= image.url %>">
