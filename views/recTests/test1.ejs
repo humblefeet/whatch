@@ -5,17 +5,16 @@
 		your movie selections.After you have selected 3 - 5 images click the submit button at the bottom of the page.
 	</p>
 	
-	<div class="row">
-		<div class="row-resizer"></div>
-	<div class="column">
-		<% images.forEach(function(image) { %>
-				<img data-genres="<%= image.genreIds %>" class="tests" src="<%= image.url %>">
-		<% }) %>
-	</div>
-		<form method="POST" action="/users/<%= user._id %>/histories" id="historyForm">
-			<button id="submitButton">Submit Selections</button>
-		</form>
-	</div>
+	<div class="test-page">
+		<div class="polaroid">
+			<% images.forEach(function(image) { %>
+					<img data-genres="<%= image.genreIds %>" class="test-images" src="<%= image.url %>">
+			<% }) %>
+		</div>
+			<form method="POST" action="/users/<%= user._id %>/histories" id="historyForm">
+				<button id="submitButton">Submit Selections</button>
+			</form>
+</div>
 
 
 

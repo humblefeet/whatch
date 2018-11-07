@@ -20,18 +20,6 @@ li{
     list-style: none;
 }
 
-.column{
-    float: left;
-    width: 100%;
-    padding: 5px;
-}
-
-.row{
-    text-align: center;
-    content: "";
-    clear: both;
-}
-
 nav{
     overflow: hidden;
     background-color: #43a4dd;
@@ -52,13 +40,26 @@ nav li{
     color: white;
 }
 
-.tests{
-    border: black solid 2px;
-    width: 32%;
-    max-height: 33em;
+
+.test-page{
+    columns: 400px;
+    display: block;
 }
 
-.tests:hover{
+.polaroid{
+    page-break-inside: auto;
+    break-inside: auto;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 1em;
+    background-color: rgb(255, 253, 248)
+}
+.test-images{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.test-images:hover{
     box-shadow: 8px 8px 8px 0 rgba(88, 227, 251, 0.466), 8px 8px 8px 0 rgba(88, 227, 251, 0.466);
 
 }
@@ -80,11 +81,15 @@ nav li{
 }
 
 .history{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 2em 1em;
     display: block;
     border: black 2px solid;
-    width: 50%;
-    margin: 2em;
-    float:  left;
+    border-radius: 15px;
+    width: 40%;
+    margin: 3em 2em 0 6em;
+    float: left;
 }
 
 .movie-grid{
@@ -129,6 +134,7 @@ nav li{
 }
 
 .detail-image{
+    border: 2px rgb(206, 168, 122);
     border-radius: 10%;
     height: 30em;
     width: 30%;
@@ -156,13 +162,15 @@ nav li{
 
 .selected{
     box-sizing: border-box;
-    border: 8px solid rgb(255, 241, 42);
+    box-shadow: 0 4px 8px 0 rgba(255, 241, 42), 0 6px 20px 0 rgba(255, 241, 42);
 }
 
 .unselected{
     border: 0px;
 }
 
+<<<<<<< HEAD
+=======
 /* Masonry test page */
 * { box-sizing: border-box; }
 
@@ -199,3 +207,4 @@ html { overflow-y: scroll; }
     width: 4em;
     border-radius: 5px;
 }
+>>>>>>> f98771d863c5abd04ae939310db76ecebe0b6edf
