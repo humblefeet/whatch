@@ -1,12 +1,17 @@
 var testImages =  document.querySelectorAll('.tests');  
 var submitButton = document.getElementById('submitButton');
 var genresSelected = [];
-
+var canTest = false;
 
 function  selectImage(e){
     var el = e.target;
     var imageData = el.dataset.genres;
-    if (el.classList.contains('selected')){
+    if(genresSelected.length > 2 && genresSelected.length <= 5){
+        canTest = true;
+    }else{
+        canTest = false;
+    }
+    if (el.classList.contains('selected') && canTest){
         el.classList.toggle('unselected');
         var index = genresSelected.indexOf(imageData);
         if (index > -1) {
@@ -18,6 +23,9 @@ function  selectImage(e){
     }
     console.log(genresSelected);
 }
+/*
+Limit total images clicked = Still trying to implement this
+*/
 
 
 
@@ -26,16 +34,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         image.addEventListener('click', selectImage);
     });
 })
-
-
-/*
-User clicks image
-Image is highlighted
-Image genre(s) added to array
-If clicked again, image is unhighlighted
-Image's genre(s) removed from array
-Limit to 3(?) total images clicked = Still need to implement this
-*/
 
 
 // after submit bitton is clicked inside that function genre count functions are run
@@ -52,44 +50,46 @@ document.getElementById('submitButton').addEventListener("click",function(){
 function returnTopTwoGenres(arr){
     let newArr = []
     arr.forEach(function(id){
-    newArr.push(id.split(','))
+        newArr.push(id.split(','))
     })
     var merged = [].concat.apply([], newArr);
     let obj ={}
     merged.forEach(function(genre){
         if (genre in obj){
-        obj[genre] = obj[genre]+= 1;
+            obj[genre] = obj[genre]+= 1;
         }else{
             obj[genre] = 1; 
         }
     });
-
-  	var sortable=[];
+//return obj;
+    var sortable=[];
 	for(var key in obj)
 		if(obj.hasOwnProperty(key))
 			sortable.push([key, obj[key]]); 
 	sortable.sort(function(a, b)
 	{
-    return b[1]-a[1];
-    //   console.log(b[1]-a[1]);
-
+        return b[1]-a[1];
 	});
-	var topTwo = []
+    var topTwo = []
 	for(let i=0; i < 2; i++ ){
-    topTwo.push(sortable[i]);
+        topTwo.push(sortable[i]);
     }
     var topGenreIds = []
     topTwo.forEach(function(arr){
-    topGenreIds.push(arr[0])
+        topGenreIds.push(arr[0])
     })
     topGenreIds = topGenreIds.join();
     console.log('top returned', topGenreIds)
-    var form = document.getElementById('imageForm');
-    var input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = 'genres';
-    input.value = topGenreIds;
-    form.appendChild(input);
+    createHistory(topGenreIds);
+}
+
+function createHistory(topGenreIds) {
+	var form = document.getElementById('historyForm');
+	var input = document.createElement('input');
+	input.type = 'hidden';
+	input.name = 'genres';
+	input.value = topGenreIds;
+	form.appendChild(input);
 }
 
 
