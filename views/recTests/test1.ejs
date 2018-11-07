@@ -1,6 +1,9 @@
 <%- include ../partials/header.ejs %>
 
-	<h1>Select 3 - 5 images</h1>
+	<h1>Select Your Favorite Photos</h1>
+	<p>This is your test page. It is <u>crucial</u> that you carefully choose the correct images to get 
+		your movie selections.After you have selected 3 - 5 images click the submit button at the bottom of the page.
+	</p>
 	
 	<div class="row">
 		<div class="row-resizer"></div>
@@ -12,7 +15,7 @@
 		<form method="POST" action="/users/<%= user._id %>/histories" id="historyForm">
 			<button id="submitButton">Submit Selections</button>
 		</form>
-</div>
+	</div>
 
 
 
