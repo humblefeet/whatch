@@ -39,7 +39,7 @@ Promise.all([Image.deleteMany({}), Genre.deleteMany({})])
 		{genres: [genres[15]._id, genres[0]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
 		{genres: [genres[1]._id, genres[8]._id], url:'https://i.imgur.com/6C7rswj.jpg'},
 		{genres: [genres[7]._id, genres[3]._id], url:'https://i.imgur.com/PDEWvSd.jpg'},
-		{genres: [genres[13]._id, genres[8]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
+		{genres: [genres[14]._id, genres[8]._id], url:'https://i.imgur.com/qeRhrN3.jpg'},
 		{genres: [genres[12]._id, genres[8]._id], url:'https://i.imgur.com/gbp2oqx.jpg'},
 		{genres: [genres[10]._id, genres[15]._id], url:'https://i.imgur.com/CfgC2PH.jpg'},
 		{genres: [genres[6]._id, genres[8]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
