@@ -11,12 +11,23 @@ module.exports = {
 						image.genreIds += genre.genreId + ",";
 					})
 					image.genreIds = image.genreIds.substring(0, image.genreIds.length - 1);
-				})
+                })
+                shuffleArray(images);
 				res.render('recTests/test1', {user: req.userModel, images});
 			})
     }
 }
 
-// use getAttribute on td element to get the genre IDs for that element
-// do .split(',') and save to get array separated genres
-// pass the genres back to the controller to do API call
+function shuffleArray(images){
+    let list = images.length;
+    let index;
+    let element;
+    while(list>0){
+        index = Math.floor(Math.random() * list);
+        list--;
+        element = images[list];
+        images[list] = images[index];
+        images[index] = element;
+    }
+    return images;
+}
