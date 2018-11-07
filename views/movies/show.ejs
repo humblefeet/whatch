@@ -1,7 +1,8 @@
 <%- include ../partials/header.ejs %>
 <main class="show-container">
     <div class="movie-detail">
-        <h1><%= movie.title %></h1>
+		<h1><%= movie.title %></h1>
+		<h3>About This Movie</h3>
 		<p><%= movie.overview %></p>
 		<% if (providers.length > 0) { %>
 			Where to Watch:
