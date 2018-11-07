@@ -4,9 +4,11 @@
 		<div>
 			<% if (user.histories.length > 0) { %>
 				<% user.histories.forEach(function(history) { %>
-					<p><%= history.id %></p>
-					<p>Recommendations From: <%= history.createdAt.toDateString() %></p>
-					<p>Genres Selected: <%= history.genres %></p>
+					<p>
+						<a href="/users/<%= user.id %>/histories/<%= history.id %>/movies">
+						<%= history.createdAt.toDateString() %>
+						</a>
+					</p>
 				<% }) %>
 			<% } else { %>
 				<h2>No histories to display</h2>
