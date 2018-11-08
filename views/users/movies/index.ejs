@@ -15,7 +15,15 @@
                 <!-- <h1><%= movie.title %></h1> -->
                 </a>
 			<% })%>
-        </div>
+		</div>
+		<div id="pagination-links">
+			<p>Pages: </p>
+			<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/1">1</a>
+			<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/2">2</a>
+			<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/3">3</a>
+			<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/4">4</a>
+			<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/5">5</a>
+		</div>
     </main>
     
 <%- include ../../partials/footer.ejs %>
