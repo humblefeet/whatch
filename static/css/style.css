@@ -218,4 +218,9 @@ html { overflow-y: scroll; }
     background-image: url("https://i.imgur.com/FmiDvyI.jpg");
 
 }
-
+.hidden-form{
+    visibility: hidden;
+}
+.show-button{
+    visibility: visible;
+}
