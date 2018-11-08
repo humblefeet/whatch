@@ -58,3 +58,4 @@ app.use('/tests', testsRouter);
 
 // Start the server listening for incoming requests
 app.listen(process.env.PORT || 3000);
+console.log("fuck you");
