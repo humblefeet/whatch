@@ -1,4 +1,4 @@
-var testImages =  document.querySelectorAll('.polaroid');  
+var testImages =  document.querySelectorAll('.test-images');  
 var submitButton = document.getElementById('submitButton');
 var genresSelected = [];
 
@@ -9,18 +9,19 @@ function  selectImage(e){
     if (genresSelected.includes(imageData)){
         el.classList.toggle('unselected');
         var index = genresSelected.indexOf(imageData);
-        console.log(genresSelected);
+        // console.log(genresSelected);
         if (index > -1) {
             genresSelected.splice(index, 1);
         }
-        console.log(genresSelected)
+        // console.log(genresSelected)
     }else{
         el.classList.toggle('selected');
         genresSelected.push(imageData);
-        if (genresSelected.length > 3){
-            submitButton.focus();
-        }
     }
+    if (genresSelected.length > 3){
+        submitButton.focus();
+    }
+    console.log({genresSelected, imageData})
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
