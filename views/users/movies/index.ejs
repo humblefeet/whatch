@@ -6,8 +6,7 @@
         <div>
             <% movies.forEach(function(movie) { %>
                 <a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/<%=movie.id%>">
-				<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
-                <!-- <h1><%= movie.title %></h1> -->
+    				<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
                 </a>
 			<% })%>
         </div>
