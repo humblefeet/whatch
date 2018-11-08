@@ -213,4 +213,12 @@ nav li:hover{
     background-image: url("https://i.imgur.com/FmiDvyI.jpg");
 
 }
-
+.test-heading{
+    background-color: #43a4dd;
+}
+.hidden-form{
+    visibility: hidden;
+}
+.show-button{
+    visibility: visible;
+}

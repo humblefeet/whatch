@@ -21,13 +21,7 @@ function  selectImage(e){
             submitButton.focus();
         }
     }
-    console.log(genresSelected);
 }
-/*
-Limit total images clicked = Still trying to implement this
-*/
-
-
 
 document.addEventListener("DOMContentLoaded", function(event) {
     testImages.forEach(function(image){
@@ -35,14 +29,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 })
 
-
-// after submit bitton is clicked inside that function genre count functions are run
-//  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
-    if (genresSelected.length === 5){
-        returnTopTwoGenres(genresSelected);
-        submitButton.focus();
-    }
+    returnTopTwoGenres(genresSelected);
 })
 
 
@@ -60,7 +48,6 @@ function returnTopTwoGenres(arr){
             obj[genre] = 1; 
         }
     });
-//return obj;
     var sortable=[];
 	for(var key in obj)
 		if(obj.hasOwnProperty(key))
@@ -78,7 +65,6 @@ function returnTopTwoGenres(arr){
         topGenreIds.push(arr[0])
     })
     topGenreIds = topGenreIds.join();
-    console.log('top returned', topGenreIds)
     createHistory(topGenreIds);
 }
 
