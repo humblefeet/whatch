@@ -4,9 +4,21 @@
 <body>
     <main class="movie-grid">
         <div>
+<<<<<<< HEAD
+			<% movies.forEach(function(movie) { %>
+				
+				<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/<%=movie.id%>">
+				<% if (movie.poster_path) { %>
+					<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
+				<% } else { %>
+					<img src="/img/missing-poster.png" class="poster missing-poster">
+				<% } %>
+                <!-- <h1><%= movie.title %></h1> -->
+=======
             <% movies.forEach(function(movie) { %>
                 <a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/<%=movie.id%>">
     				<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
+>>>>>>> 22e14a2c6cdbbd1b25610bfe41dbb465bd58553b
                 </a>
 			<% })%>
         </div>

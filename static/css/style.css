@@ -121,6 +121,10 @@ nav li{
     margin: 10px;
 }
 
+.missing-poster {
+	padding: 45px;
+}
+
 .poster:hover{
     box-shadow: 0 4px 8px 0 rgba(88, 227, 251, 0.466), 0 6px 20px 0 rgba(88, 227, 251, 0.466);
 }
@@ -169,6 +173,39 @@ nav li{
     border: 0px;
 }
 
+<<<<<<< HEAD
+/* Masonry test page */
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+/* clear fix */
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+/*  need to fix column element*/
+
+.row-resizer,
+.column-item {
+    width: 33.333%;
+}
+
+.column-item {
+    float: left;
+}
+
+.column-item img {
+    display: block;
+    width: 100%;
+}
+
+=======
+>>>>>>> 22e14a2c6cdbbd1b25610bfe41dbb465bd58553b
 .provider-icons{
     background-size: cover;
     display: inline-block;
