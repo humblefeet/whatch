@@ -9,12 +9,11 @@
 					<img data-genres="<%= image.genreIds %>" class="test-images" src="<%= image.url %>">
 			<% }) %>
 		</div>
-
-			<form method="POST" action="/users/<%= user._id %>/histories" id="historyForm" class="test-images" class="hidden-form">
-				<button id="submitButton">Submit Selections</button>
-			</form>
 </div>
 
+<form method="POST" action="/users/<%= user._id %>/histories" id="historyForm">
+	<button id="submitButton">Submit Selections</button>
+</form>
 
 
 <%- include ../partials/footer.ejs %>

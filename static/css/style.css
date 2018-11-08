@@ -1,7 +1,11 @@
 a{
     text-decoration: none;
 }
-
+h2{
+    margin: 2px;
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 2px;
+}
 body{
     margin: 0;
     background-color: rgb(200, 200, 200);
@@ -39,8 +43,19 @@ nav li{
     margin: 10px;
     color: white;
 }
+nav li a{
+    line-height: 2.5em;
+}
 
+nav li:hover{
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+
+.nav-links{
+    font-family: 'Quicksand', sans-serif;
+
+}
 .test-page{
     columns: 400px;
     display: block;
@@ -83,15 +98,22 @@ nav li{
 .history{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    padding: 2em 1em;
+    padding: 0.2em 0.5em;
     display: block;
     border: black 2px solid;
     border-radius: 15px;
     width: 40%;
+    line-height: 3em;
     margin: 3em 2em 0 6em;
     float: left;
-}
 
+}
+.history-heading{
+    background-color: #43a4dd;
+    border-radius: 10px 10px 0 0 ;
+    border-bottom: 2px solid rgb(49, 49, 49);
+    box-shadow: 3px 2px rgb(0, 0, 0, 0.2)
+}
 .movie-grid{
     margin: auto;
     height: auto;
@@ -119,6 +141,10 @@ nav li{
     width: 20em;
     padding: 4px;
     margin: 10px;
+}
+
+.missing-poster {
+	padding: 45px;
 }
 
 .poster:hover{
@@ -167,37 +193,6 @@ nav li{
 
 .unselected{
     box-shadow: none;
-}
-
-
-/* Masonry test page */
-* { box-sizing: border-box; }
-
-/* force scrollbar */
-html { overflow-y: scroll; }
-
-/* clear fix */
-.row:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-/* ---- .grid-item ---- */
-/*  need to fix column element*/
-
-.row-resizer,
-.column-item {
-    width: 33.333%;
-}
-
-.column-item {
-    float: left;
-}
-
-.column-item img {
-    display: block;
-    width: 100%;
 }
 
 .provider-icons{

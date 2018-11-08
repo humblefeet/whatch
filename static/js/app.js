@@ -1,25 +1,25 @@
 var testImages =  document.querySelectorAll('.polaroid');  
 var submitButton = document.getElementById('submitButton');
 var genresSelected = [];
-var canTest = false;
 
 function  selectImage(e){
     var el = e.target;
     var imageData = el.dataset.genres;
-    if(genresSelected.length > 2 && genresSelected.length <= 5){
-        canTest = true;
-    }else{
-        canTest = false;
-    }
-    if (el.classList.contains('selected')){
+
+    if (genresSelected.includes(imageData)){
         el.classList.toggle('unselected');
         var index = genresSelected.indexOf(imageData);
+        console.log(genresSelected);
         if (index > -1) {
             genresSelected.splice(index, 1);
         }
+        console.log(genresSelected)
     }else{
         el.classList.toggle('selected');
         genresSelected.push(imageData);
+        if (genresSelected.length === 5){
+            submitButton.focus();
+        }
     }
 }
 
