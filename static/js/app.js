@@ -17,7 +17,7 @@ function  selectImage(e){
     }else{
         el.classList.toggle('selected');
         genresSelected.push(imageData);
-        if (genresSelected.length === 5){
+        if (genresSelected.length > 3){
             submitButton.focus();
         }
     }

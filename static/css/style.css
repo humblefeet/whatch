@@ -222,3 +222,8 @@ nav li:hover{
 .show-button{
     visibility: visible;
 }
+
+.imbd-logo{
+    height: auto;
+    width:  8em;
+}
