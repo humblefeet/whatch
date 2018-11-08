@@ -30,10 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 document.getElementById('submitButton').addEventListener("click",function(){
-    if (genresSelected.length > 2 && genresSelected.length <= 5){
     returnTopTwoGenres(genresSelected);
-    }else{
-    }
 })
 
 
