@@ -57,4 +57,4 @@ app.use('/users', usersRouter);
 app.use('/tests', testsRouter);
 
 // Start the server listening for incoming requests
-app.listen(3000);
+app.listen(process.env.PORT || 3000);

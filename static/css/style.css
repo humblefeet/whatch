@@ -173,6 +173,7 @@ nav li{
     border: 0px;
 }
 
+<<<<<<< HEAD
 /* Masonry test page */
 * { box-sizing: border-box; }
 
@@ -203,6 +204,8 @@ html { overflow-y: scroll; }
     width: 100%;
 }
 
+=======
+>>>>>>> 22e14a2c6cdbbd1b25610bfe41dbb465bd58553b
 .provider-icons{
     background-size: cover;
     display: inline-block;
