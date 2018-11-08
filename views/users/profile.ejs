@@ -7,7 +7,7 @@
 			<% if (user.histories.length > 0) { %>
 				<% user.histories.forEach(function(history) { %>
 					<p>
-						<a href="/users/<%= user.id %>/histories/<%= history.id %>/movies">
+						<a href="/users/<%= user.id %>/histories/<%= history.id %>/movies/1">
 							<%= history.createdAt.toDateString() %>
 								<a href="/users/<%= user.id %>/histories/<%= history.id %>/delete">  (Delete) </a>
 						</a>
