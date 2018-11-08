@@ -33,17 +33,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     testImages.forEach(function(image){
         image.addEventListener('click', selectImage);
     });
+    submitButton.addEventListener("click",function(){
+        if (genresSelected.length <= 5){
+            returnTopTwoGenres(genresSelected);
+        }
+    })
 })
 
 
 // after submit bitton is clicked inside that function genre count functions are run
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
-document.getElementById('submitButton').addEventListener("click",function(){
-    if (genresSelected.length === 5){
-        returnTopTwoGenres(genresSelected);
-        submitButton.focus();
-    }
-})
+
 
 
 function returnTopTwoGenres(arr){
