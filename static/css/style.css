@@ -192,7 +192,7 @@ nav li:hover{
 }
 
 .unselected{
-    border: 0px;
+    box-shadow: none;
 }
 
 .provider-icons{
