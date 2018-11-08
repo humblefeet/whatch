@@ -215,6 +215,8 @@ nav li:hover{
 }
 .test-heading{
     background-color: #43a4dd;
+    text-align: center;
+    color: darkorange;
 }
 .hidden-form{
     visibility: hidden;
