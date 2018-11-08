@@ -188,7 +188,7 @@ nav li:hover{
 
 .selected{
     box-sizing: border-box;
-    box-shadow: 0 4px 8px 0 rgba(255, 241, 42), 0 6px 20px 0 rgba(255, 241, 42);
+    box-shadow: 0 4px 8px 0 rgb(240,145,91), 0 6px 20px 0 rgb(240,145,91);
 }
 
 .unselected{
@@ -214,3 +214,12 @@ nav li:hover{
 
 }
 
+#submitButton{
+    background-color: rgb(240,145,91);
+    line-height: 3em;
+    font-size: 3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 3px solid black;
+    font-family: 'Hind', sans-serif;
+    color: white;
+}

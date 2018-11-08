@@ -1,25 +1,35 @@
 var testImages =  document.querySelectorAll('.polaroid');  
 var submitButton = document.getElementById('submitButton');
+var hiddenButton = document.querySelector('.hidden-button');
+var allTestImages = document.querySelectorAll('.test-images');
 var genresSelected = [];
+
+
+function fiveClicks(){
+    if (genresSelected.length > 5){
+        //get all test images
+        //determine if image exists in genresSelected
+        //if not, grey out image
+            //make image unclickable
+    }
+}
 
 function  selectImage(e){
     var el = e.target;
     var imageData = el.dataset.genres;
 
     if (genresSelected.includes(imageData)){
-        el.classList.toggle('unselected');
+        el.classList.remove('selected');
         var index = genresSelected.indexOf(imageData);
-        console.log(genresSelected);
         if (index > -1) {
             genresSelected.splice(index, 1);
         }
         console.log(genresSelected)
+        fiveClicks()
     }else{
-        el.classList.toggle('selected');
+        el.classList.add('selected');
         genresSelected.push(imageData);
-        if (genresSelected.length === 5){
-            submitButton.focus();
-        }
+        fiveClicks()
     }
     console.log(genresSelected);
 }
@@ -33,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     testImages.forEach(function(image){
         image.addEventListener('click', selectImage);
     });
-    submitButton.addEventListener("click",function(){
-        if (genresSelected.length <= 5){
+    if (genresSelected.length <= 5){
+        submitButton.addEventListener("click",function(){
             returnTopTwoGenres(genresSelected);
-        }
-    })
+        })
+    }
 })
 
 
