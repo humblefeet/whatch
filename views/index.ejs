@@ -1,5 +1,10 @@
 <%- include('./partials/header.ejs') %>
-	<h1>Popular Movies</h1>
+	<div id="intro-text">
+		<h1>Welcome to Whatch!</h1>
+		<p><a href="/discover">Discover Movies</a> here to get personal movie recommendations!</p>
+		<p>Below is a list of popular movies on <a href="https://www.themoviedb.org/">The Movie Database.</a></p>
+	</div>
+	
 	<main class="movie-grid">
 			<div>
 				<% movies.forEach(function(movie) { %>
