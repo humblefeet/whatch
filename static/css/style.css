@@ -206,15 +206,28 @@ nav li:hover{
 .netflix{
     background-image: url("https://i.imgur.com/UfgOEwx.jpg");
 }
+
 .hulu{
     background-image: url("https://i.imgur.com/2pHET9b.png");
 }
+
 .amazon{
     background-image: url("https://i.imgur.com/FmiDvyI.jpg");
-
 }
 
-#submitButton{
+.test-heading{
+    background-color: #43a4dd;
+}
+
+.hidden-form{
+    visibility: hidden;
+}
+
+.grey-image{
+    filter: grayscale(100%);
+}
+
+.submitButton{
     background-color: rgb(240,145,91);
     line-height: 3em;
     font-size: 3em;
@@ -222,4 +235,9 @@ nav li:hover{
     border: 3px solid black;
     font-family: 'Hind', sans-serif;
     color: white;
+    visibility: hidden;
+}
+
+.show-button{
+    visibility: visible;
 }

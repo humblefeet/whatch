@@ -1,43 +1,49 @@
-var testImages =  document.querySelectorAll('.polaroid');  
-var submitButton = document.getElementById('submitButton');
+var testImages =  document.querySelectorAll('.test-images');  
+var submitButton = document.querySelector('.submitButton');
 var hiddenButton = document.querySelector('.hidden-button');
-var allTestImages = document.querySelectorAll('.test-images');
 var genresSelected = [];
-
+var imageClickedTest=[];
 
 function fiveClicks(){
-    if (genresSelected.length > 5){
-        //get all test images
-        //determine if image exists in genresSelected
-        //if not, grey out image
-            //make image unclickable
+    if (genresSelected.length >= 5){
+        testImages.forEach(function(image){
+            if(!imageClickedTest.includes(image)){
+                image.classList.add('grey-image');
+                image.removeEventListener('click', selectImage);
+            }
+        })
+        submitButton.classList.add('show-button');
+        submitButton.focus();
+    }else{
+        testImages.forEach(function(image){
+            image.classList.remove('grey-image');
+            image.addEventListener('click', selectImage)
+        })
     }
 }
 
 function  selectImage(e){
     var el = e.target;
     var imageData = el.dataset.genres;
+    var id = el.dataset.id
 
     if (genresSelected.includes(imageData)){
         el.classList.remove('selected');
         var index = genresSelected.indexOf(imageData);
+        var idx = imageClickedTest.indexOf(id)
         if (index > -1) {
             genresSelected.splice(index, 1);
+            imageClickedTest.splice(idx, 1);
         }
         console.log(genresSelected)
         fiveClicks()
     }else{
         el.classList.add('selected');
         genresSelected.push(imageData);
+        imageClickedTest.push(id)
         fiveClicks()
     }
-    console.log(genresSelected);
 }
-/*
-Limit total images clicked = Still trying to implement this
-*/
-
-
 
 document.addEventListener("DOMContentLoaded", function(event) {
     testImages.forEach(function(image){
@@ -50,10 +56,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 })
 
-
-// after submit bitton is clicked inside that function genre count functions are run
-//  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
-
+submitButton.addEventListener("click",function(){
+    returnTopTwoGenres(genresSelected);
+})
 
 
 function returnTopTwoGenres(arr){
@@ -70,7 +75,6 @@ function returnTopTwoGenres(arr){
             obj[genre] = 1; 
         }
     });
-//return obj;
     var sortable=[];
 	for(var key in obj)
 		if(obj.hasOwnProperty(key))
@@ -88,7 +92,6 @@ function returnTopTwoGenres(arr){
         topGenreIds.push(arr[0])
     })
     topGenreIds = topGenreIds.join();
-    console.log('top returned', topGenreIds)
     createHistory(topGenreIds);
 }
 

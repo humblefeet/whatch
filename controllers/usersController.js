@@ -19,7 +19,7 @@ module.exports = {
 			if (err) return next(err);
 		})
 		var history = user.histories[user.histories.length-1];
-		res.redirect('/users/' + user._id + '/histories/' + history._id + '/movies/1');
+		res.redirect('/users/' + user._id + '/histories/' + history._id + '/movies/?page=1');
 	},
 	removeHistory: function(req, res, next) {
 		var user = req.userModel;
@@ -32,7 +32,7 @@ module.exports = {
 	},
 	getMovies: function(req, res) {
 		var user = req.userModel;
-		var page = req.params.page;
+		var page = req.query.page;
 		var newHistory = "";
 		user.histories.forEach(function(history) {
 			if (history._id == req.params.hid) {
@@ -40,6 +40,7 @@ module.exports = {
 			}
 		})
 		var genres = newHistory.genres;
+		console.log(`${base_url}discover/movie${api_key}&with_genres=${genres}&page=${page}`)
 		axios.get(`${base_url}discover/movie${api_key}&with_genres=${genres}&page=${page}`)
 			.then(function(response) {
 				var movies = response.data.results;
