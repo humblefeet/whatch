@@ -1,25 +1,25 @@
 var testImages =  document.querySelectorAll('.polaroid');  
 var submitButton = document.getElementById('submitButton');
 var genresSelected = [];
-var canTest = false;
 
 function  selectImage(e){
     var el = e.target;
     var imageData = el.dataset.genres;
-    if(genresSelected.length > 2 && genresSelected.length <= 5){
-        canTest = true;
-    }else{
-        canTest = false;
-    }
-    if (el.classList.contains('selected') && canTest){
+
+    if (genresSelected.includes(imageData)){
         el.classList.toggle('unselected');
         var index = genresSelected.indexOf(imageData);
+        console.log(genresSelected);
         if (index > -1) {
             genresSelected.splice(index, 1);
         }
+        console.log(genresSelected)
     }else{
         el.classList.toggle('selected');
         genresSelected.push(imageData);
+        if (genresSelected.length === 5){
+            submitButton.focus();
+        }
     }
     console.log(genresSelected);
 }
@@ -39,10 +39,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // after submit bitton is clicked inside that function genre count functions are run
 //  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
 document.getElementById('submitButton').addEventListener("click",function(){
-    console.log('clicked')
-    if (genresSelected.length > 2 && genresSelected.length <= 5){
-        console.log(genresSelected)
-    returnTopTwoGenres(genresSelected);
+    if (genresSelected.length === 5){
+        returnTopTwoGenres(genresSelected);
+        submitButton.focus();
     }
 })
 
