@@ -19,7 +19,7 @@
 		<div id="pagination-links">
 			<p>Pages: </p>
 			<% pages.forEach(function(page) { %>
-				<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/<%=page%>"><%=page%></a>
+				<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies?page=<%=page%>"><%=page%></a>
 			<% }) %>
 		</div>
     </main>
