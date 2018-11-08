@@ -15,7 +15,13 @@
                 <!-- <h1><%= movie.title %></h1> -->
                 </a>
 			<% })%>
-        </div>
+		</div>
+		<div id="pagination-links">
+			<p>Pages: </p>
+			<% pages.forEach(function(page) { %>
+				<a href="/users/<%= user.id %>/histories/<%=newHistory.id%>/movies/<%=page%>"><%=page%></a>
+			<% }) %>
+		</div>
     </main>
     
 <%- include ../../partials/footer.ejs %>
