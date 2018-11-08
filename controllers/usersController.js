@@ -43,7 +43,14 @@ module.exports = {
 		axios.get(`${base_url}discover/movie${api_key}&with_genres=${genres}&page=${page}`)
 			.then(function(response) {
 				var movies = response.data.results;
-				res.render('users/movies/index', {user, movies, newHistory});
+				var pages = [];
+				var i = 1;
+				while (i <= 10) {
+					pages.push(i);
+					i++;
+				}
+				console.log(pages);
+				res.render('users/movies/index', {user, movies, pages, newHistory});
 			})
 	},
 	getOneMovie: function(req, res) {
