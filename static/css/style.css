@@ -143,6 +143,10 @@ nav li:hover{
     margin: 10px;
 }
 
+.missing-poster {
+	padding: 45px;
+}
+
 .poster:hover{
     box-shadow: 0 4px 8px 0 rgba(88, 227, 251, 0.466), 0 6px 20px 0 rgba(88, 227, 251, 0.466);
 }
