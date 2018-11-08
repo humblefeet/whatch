@@ -8,11 +8,13 @@
 	<main class="movie-grid">
 			<div>
 				<% movies.forEach(function(movie) { %>
-					<% if (movie.poster_path) { %>
-						<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
-					<% } else { %>
-						<img src="/img/missing-poster.png" class="poster missing-poster">
-					<% } %>
+					<a href="https://www.themoviedb.org/movie/<%=movie.id%>" target="_blank">
+						<% if (movie.poster_path) { %>
+							<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
+						<% } else { %>
+							<img src="/img/missing-poster.png" class="poster missing-poster">
+						<% } %>
+					</a>
 				<% })%>
 			</div>
 		</main>
