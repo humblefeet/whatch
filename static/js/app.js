@@ -6,7 +6,12 @@ var canTest = false;
 function  selectImage(e){
     var el = e.target;
     var imageData = el.dataset.genres;
-    if (el.classList.contains('selected') && canTest){
+    if(genresSelected.length > 2 && genresSelected.length <= 5){
+        canTest = true;
+    }else{
+        canTest = false;
+    }
+    if (el.classList.contains('selected')){
         el.classList.toggle('unselected');
         var index = genresSelected.indexOf(imageData);
         if (index > -1) {
@@ -15,27 +20,8 @@ function  selectImage(e){
     }else{
         el.classList.toggle('selected');
         genresSelected.push(imageData);
-    }  
-    
-    //  This  needs to have a count that moves up and down
-    
-    // if(genresSelected.length > 2 && genresSelected.length <= 5){
-    //     submitButton.classList.add('show-button')
-    //     submitButton.classList.remove('hidden-form')
-
-    // console.log(genresSelected);
-    // }else if (genresSelected.length < 2 || genresSelected.length > 5){
-    //     submitButton.classList.add('hidden-form');
-    //     submitButton.classList.remove('show-button');
-    //     console.log(genresSelected.length);
-    
-    // }
+    }
 }
-/*
-Limit total images clicked = Still trying to implement this
-*/
-
-
 
 document.addEventListener("DOMContentLoaded", function(event) {
     testImages.forEach(function(image){
@@ -43,17 +29,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 })
 
-
-// after submit bitton is clicked inside that function genre count functions are run
-//  practice array to make sure the function works genresSelected = ['22,345,17','27,17,345','7,66,27']
-submitButton.addEventListener("click",function(){
-    console.log('clicked')
+document.getElementById('submitButton').addEventListener("click",function(){
     if (genresSelected.length > 2 && genresSelected.length <= 5){
-
-        console.log(genresSelected)
     returnTopTwoGenres(genresSelected);
     }else{
-        console.log("more than 5 clicked")
     }
 })
 
@@ -72,7 +51,6 @@ function returnTopTwoGenres(arr){
             obj[genre] = 1; 
         }
     });
-//return obj;
     var sortable=[];
 	for(var key in obj)
 		if(obj.hasOwnProperty(key))
@@ -90,7 +68,6 @@ function returnTopTwoGenres(arr){
         topGenreIds.push(arr[0])
     })
     topGenreIds = topGenreIds.join();
-    console.log('top returned', topGenreIds)
     createHistory(topGenreIds);
 }
 

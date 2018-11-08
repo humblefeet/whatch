@@ -1,10 +1,8 @@
 <%- include ../partials/header.ejs %>
-
-	<h1>Select Your Favorite Photos</h1>
-	<p>This is your test page. It is <u>crucial</u> that you carefully choose the correct images to get 
-		your movie selections.After you have selected 3 - 5 images click the submit button at the bottom of the page.
-	</p>
-	
+	<div class="test-heading">
+		<h1 style="color: orange">let your eyes choose a movie</h1>
+		
+	</div>
 	<div class="test-page">
 		<div class="polaroid">
 			<% images.forEach(function(image) { %>
@@ -12,7 +10,7 @@
 			<% }) %>
 		</div>
 
-			<form method="POST" action="/users/<%= user._id %>/histories" id="historyForm" class="hidden-form">
+			<form method="POST" action="/users/<%= user._id %>/histories" id="historyForm" class="test-images" class="hidden-form">
 				<button id="submitButton">Submit Selections</button>
 			</form>
 </div>
