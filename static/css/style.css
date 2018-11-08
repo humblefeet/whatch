@@ -121,6 +121,10 @@ nav li{
     margin: 10px;
 }
 
+.missing-poster {
+	padding: 45px;
+}
+
 .poster:hover{
     box-shadow: 0 4px 8px 0 rgba(88, 227, 251, 0.466), 0 6px 20px 0 rgba(88, 227, 251, 0.466);
 }
@@ -169,10 +173,6 @@ nav li{
     border: 0px;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 54de255d08acec59d5eda692165ae6fff2e85cb4
 /* Masonry test page */
 * { box-sizing: border-box; }
 
@@ -210,8 +210,6 @@ html { overflow-y: scroll; }
     width: 4em;
     border-radius: 5px;
 }
-<<<<<<< HEAD
-=======
 
 .netflix{
     background-image: url("https://i.imgur.com/UfgOEwx.jpg");
@@ -224,4 +222,3 @@ html { overflow-y: scroll; }
 
 }
 
->>>>>>> 54de255d08acec59d5eda692165ae6fff2e85cb4
