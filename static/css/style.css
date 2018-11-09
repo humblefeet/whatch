@@ -261,6 +261,9 @@ nav li:hover{
 }
 
 .test-heading{
+    background-color: #43a4dd;
+    text-align: center;
+    color: darkorange;
     margin-left: 1.5em;
     color: white;
     margin-top: 1em;
@@ -287,4 +290,9 @@ nav li:hover{
 
 .show-button{
     visibility: visible;
+}
+
+.imbd-logo{
+    height: auto;
+    width:  8em;
 }
