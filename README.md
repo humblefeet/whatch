@@ -1,7 +1,7 @@
 # whatch
 whatch is a movie recommendation web application. Recommendations are created based on the user's choice or mood at the given time of use on the web application. Upon signing into the app, the user is given a large selection of images to choose from. These images are tied to genres in film. After 5 images are chosen, whatch is able to give a list of  movie recommendations based on this selection. The user is  able to see where the movie is streaming and link to that streaming service.
 
-![imgur][(https://i.imgur.com/8nLXVTp.png)
+![imgur](https://i.imgur.com/8nLXVTp.png)
 
 ## Technologies Used
 * Just Watch API 
