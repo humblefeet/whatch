@@ -1,8 +1,8 @@
 # whatch
-
+Our app helps you choose a movie you want to see based off a selection of photos you choose.
 
 ## Technologies Used
-* Just Watch API
+* Just Watch API 
 * TMDb API
 * Node
 * Mongo
@@ -33,4 +33,8 @@ GET | /users/:id/histories/:hid/movies/:mid
 
 ## Unsolved Problems
 
+
+
 ## Future Enhancements
+* We could add the ability to see if a move could be rented
+* Giving a choice between movies or tv shows
