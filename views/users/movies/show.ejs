@@ -8,21 +8,15 @@
 		<% if (providers.length > 0) { %>
 			<h3>Currently Streaming On</h3>
 			<% providers.forEach(function(provider) { %>
-				<div class="provider-icons <%= provider %>"></div>
+				<a href="https://www.<%=provider%>.com/">
+					<div class="provider-icons <%= provider %>"></div>
+				</a>
 			<% }) %>
 		<% }else { %>
 			<h3>Not Currently Streaming On Netflix, Hulu, or Amazon</h3>
-		<%}%>
-		
-		
-		
-	
-		
-		
+		<%}%>	
     </div>
 	<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="detail-image" alt="movie image">
-
-
 
 </main>
 
