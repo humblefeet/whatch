@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-require('dotenv').config();
-=======
 require('dotenv').config()
->>>>>>> 4328b44db5a867dbccfa7416fcef2db02695e6a9
 require('./database');
 
 var Image = require('../models/Image');
