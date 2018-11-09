@@ -2,7 +2,7 @@ var Image = require('../models/Image');
 var Genre = require('../models/Genre');
 
 module.exports = {
-    showTest: function(req,res,next){
+    showIndex: function(req,res,next){
 		Image.find({}).populate('genres').exec()
 			.then(function(images) {
 				images.forEach(function(image) {
@@ -13,7 +13,7 @@ module.exports = {
 					image.genreIds = image.genreIds.substring(0, image.genreIds.length - 1);
                 })
                 shuffleArray(images);
-				res.render('recTests/test1', {user: req.userModel, images});
+				res.render('discover/index', {user: req.userModel, images});
 			})
     }
 }
