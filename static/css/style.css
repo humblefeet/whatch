@@ -11,7 +11,8 @@ h2{
 body{
     margin: 0;
     background-color: rgb(34, 34, 34);
-    padding: 0;
+	padding: 0;
+	color: white;
 }
 button{
     width: 10%;
