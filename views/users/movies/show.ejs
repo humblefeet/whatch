@@ -5,9 +5,10 @@
 			<h1 class="history-heading"><%= movie.title %></h1>
 		</div>
 		<div class="movie-detail-sub">
-			<h3>Synopsis</h3>
-			<p><%= movie.overview %></p>
-
+			<div class="syn-div">
+				<h3 class="synopsis-heading">Synopsis</h3>
+				<p class="synopsis"><%= movie.overview %></p>
+			</div>
 			<% if (providers.length > 0) { %>
 				<h3>Currently Streaming On</h3>
 				<% providers.forEach(function(provider) { %>

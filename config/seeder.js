@@ -31,7 +31,7 @@ Promise.all([Image.deleteMany({}), Genre.deleteMany({})])
 
 .then(function(genres) {
 	return Image.create([
-		{genres: [genres[4]._id, genres[12]._id, genres[7]._id], url:'https://imgur.com/94VU72I.jpg'},
+		{genres: [genres[4]._id, genres[5]._id, genres[7]._id], url:'https://imgur.com/94VU72I.jpg'},
 		{genres: [genres[11]._id, genres[8]._id, genres[0]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
 		{genres: [genres[16]._id, genres[2]._id], url: 'https://imgur.com/jeC17yw.jpg'},
 		{genres: [genres[12]._id, genres[9]._id], url:'https://imgur.com/4t8ftjP.jpg'},

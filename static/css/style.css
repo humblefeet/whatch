@@ -140,10 +140,10 @@ nav li:hover{
     margin: 2em;
 }
 .movie-detail-sub{
-    width: 80%;
+    width: 99%;
     color: black;
     text-align: center;
-    margin: 2em auto;
+    margin: auto;
 }
 .history{
     margin: 3em ;
@@ -152,14 +152,13 @@ nav li:hover{
 
 .movie-detail{
     margin: 1em 2em 0 6em;
-
+    padding: 0;
 }
 
 .history, .movie-detail{
     box-shadow: 0 4px 8px 0 rgba(101, 138, 145, 0.466), 0 6px 20px 0 rgba(101, 138, 145, 0.466);
     background-color: rgba(200,200,200,1);
     text-align: center;
-    padding: 0.2em 0.5em;
     display: block;
     border: black 2px solid;
     border-radius: 15px;
@@ -175,6 +174,7 @@ nav li:hover{
     font-family: 'Hind', sans-serif;
     margin: 1px;
     padding: 3px;
+    color: black;
 
 }
 .history-heading > h2, .history-heading>h1{
@@ -290,6 +290,21 @@ nav li:hover{
     margin-top: 1em;
 }
 
+.synopsis-heading{
+    text-decoration: underline;
+    margin: 5px auto;
+    padding: 2px;
+    letter-spacing: 2px;
+    font-family: 'Hind', sans-serif;
+}
+.syn-div{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 80%;
+    margin: 5px auto;
+    border-radius: 10px;
+    padding: 1px 4px;
+    background-color: white;
+}
 .hidden-form{
     visibility: hidden;
 }
