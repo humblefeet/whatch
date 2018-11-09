@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Hind|Quicksand:700");
+
 a{
     text-decoration: none;
 }
@@ -8,7 +10,7 @@ h2{
 }
 body{
     margin: 0;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(34, 34, 34);
     padding: 0;
 }
 button{
@@ -101,11 +103,14 @@ nav li:hover{
     padding: 20px;
     padding-bottom: 40px;
     margin-bottom: 1em;
-    background-color: rgb(255, 253, 248)
+    border-bottom: 3px solid rgb(200, 200, 200);
+    /* background-color: rgb(255, 253, 248); */
 }
+
 .test-images{
     width: 100%;
-    margin-bottom: 40px;
+    margin-top: 40px; 
+    border-radius: 10px;
 }
 
 .test-images:hover{
@@ -222,7 +227,7 @@ nav li:hover{
 
 .selected{
     box-sizing: border-box;
-    box-shadow: 0 4px 8px 0 rgba(255, 241, 42), 0 6px 20px 0 rgba(255, 241, 42);
+    box-shadow: 0 4px 8px 0 rgb(240,145,91), 0 6px 20px 0 rgb(240,145,91);
 }
 
 .unselected{
@@ -240,21 +245,46 @@ nav li:hover{
 .netflix{
     background-image: url("https://i.imgur.com/UfgOEwx.jpg");
 }
+
 .hulu{
     background-image: url("https://i.imgur.com/2pHET9b.png");
 }
+
 .amazon{
     background-image: url("https://i.imgur.com/FmiDvyI.jpg");
-
 }
+
 .test-heading{
+<<<<<<< HEAD
     background-color: #43a4dd;
     text-align: center;
     color: darkorange;
+=======
+    margin-left: 1.5em;
+    color: white;
+    margin-top: 1em;
+>>>>>>> 29127f70d46d67c1ebbaee36e86b15b260f4b272
 }
+
 .hidden-form{
     visibility: hidden;
 }
+
+.grey-image{
+    filter: grayscale(100%);
+}
+
+.submitButton{
+    background-color: rgb(240,145,91);
+    line-height: 3em;
+    font-size: 3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 3px solid black;
+    font-family: 'Hind', sans-serif;
+    color: white;
+    visibility: hidden;
+}
+
 .show-button{
     visibility: visible;
 }
