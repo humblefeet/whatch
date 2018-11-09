@@ -4,9 +4,10 @@ a{
     text-decoration: none;
 }
 h2{
-    margin: 2px;
+    margin: 2em 0 1em;
     font-family: 'Hind', sans-serif;
     letter-spacing: 2px;
+    text-align: center;
 }
 body{
     margin: 0;
@@ -28,9 +29,13 @@ li{
 
 nav{
     overflow: hidden;
-    background-color: #43a4dd;
+    background-color: rgb(67, 164, 221);
     margin: 0;
     padding: 0;
+    border-top: 2px solid black;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px 0 rgba(67, 165, 221, 0.651), 0 2px 6px 0 rgba(74, 181, 243, 0.89);
+
 }
 
 main{
