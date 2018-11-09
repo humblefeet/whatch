@@ -1,4 +1,6 @@
+require('dotenv').config()
 require('./database');
+
 var Image = require('../models/Image');
 var Genre = require('../models/Genre');
 

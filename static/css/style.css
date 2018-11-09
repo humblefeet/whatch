@@ -23,7 +23,9 @@ button{
     width: 100%;
     background-color: rgb(255, 255, 192);
 }
-
+footer{
+    width: 100vw
+}
 li{
     list-style: none;
 }
@@ -56,11 +58,11 @@ nav li a{
 }
 
 nav li:hover{
-    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 4px solid rgb(206, 168, 122);
 
 }
 
-#popular-movies {
+.popular-movies {
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 40pt;
@@ -115,8 +117,7 @@ nav li:hover{
     padding: 20px;
     padding-bottom: 40px;
     margin-bottom: 1em;
-    border-bottom: 3px solid rgb(200, 200, 200);
-    /* background-color: rgb(255, 253, 248); */
+
 }
 
 .test-images{
@@ -138,16 +139,25 @@ nav li:hover{
     float: right;
     margin: 2em;
 }
-
-.avatar-profile{
-    height: 30%;
-    width: 90%;
-    border-radius: 50%;
-    background-color: grey;
+.movie-detail-sub{
+    width: 80%;
+    color: black;
+    text-align: center;
+    margin: 2em auto;
+}
+.history{
+    margin: 3em ;
+    float: right;
 }
 
-.history{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.movie-detail{
+    margin: 1em 2em 0 6em;
+
+}
+
+.history, .movie-detail{
+    box-shadow: 0 4px 8px 0 rgba(101, 138, 145, 0.466), 0 6px 20px 0 rgba(101, 138, 145, 0.466);
+    background-color: rgba(200,200,200,1);
     text-align: center;
     padding: 0.2em 0.5em;
     display: block;
@@ -155,15 +165,26 @@ nav li:hover{
     border-radius: 15px;
     width: 40%;
     line-height: 3em;
-    margin: 3em 2em 0 6em;
     float: left;
-
 }
 .history-heading{
     background-color: #43a4dd;
     border-radius: 10px 10px 0 0 ;
     border-bottom: 2px solid rgb(49, 49, 49);
-    box-shadow: 3px 2px rgb(0, 0, 0, 0.2)
+    box-shadow: 3px 2px rgb(0, 0, 0, 0.2);
+    font-family: 'Hind', sans-serif;
+    margin: 1px;
+    padding: 3px;
+
+}
+.history-heading > h2, .history-heading>h1{
+    margin: 0.2px 0;
+    line-height: 74px;
+
+}
+.history-container{
+    width: cover;
+    margin: auto;
 }
 .movie-grid{
     margin: auto;
@@ -179,8 +200,12 @@ nav li:hover{
     float: right;
     border:  black 2px solid;
     border-radius: 50%;
-    margin: 2px 5px;
-    height: 70px
+    margin: 1px 5px;
+    height: 68px
+}
+
+.nav-avatar:hover{
+    border: rgb(206, 168, 122) solid 2px;
 }
 
 .poster{
@@ -218,14 +243,6 @@ nav li:hover{
     margin: 1em 5em 1em 6em;
     float: right;
 }
-
-.movie-detail{
-    padding: 25px;
-    float: left;
-    margin: 1em;
-    width: 45%;
-    box-shadow: 0 4px 8px 0 rgba(101, 138, 145, 0.466), 0 6px 20px 0 rgba(101, 138, 145, 0.466);
-    border-radius: 2%;}
 
 .brand{
     float: left;
@@ -267,9 +284,7 @@ nav li:hover{
 }
 
 .test-heading{
-    background-color: #43a4dd;
     text-align: center;
-    color: darkorange;
     margin-left: 1.5em;
     color: white;
     margin-top: 1em;
@@ -288,7 +303,7 @@ nav li:hover{
     line-height: 3em;
     font-size: 3em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 3px solid black;
+    border-radius: 15px;
     font-family: 'Hind', sans-serif;
     color: white;
     visibility: hidden;
@@ -298,7 +313,25 @@ nav li:hover{
     visibility: visible;
 }
 
-.imbd-logo{
+.tmbd-logo{
     height: auto;
     width:  8em;
+    margin-top: 2em;
+}
+
+.clearfix{
+    overflow: auto;
+}
+#pagination-links{
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 2em;
+}
+#pagination-links>a{
+    text-decoration: none;
+}
+#pagination-links>a:hover{
+    border-radius: 35%;
+    border: 2px solid rgb(206, 168, 122);
 }
