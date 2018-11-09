@@ -1,32 +1,27 @@
 <%- include('../partials/header.ejs') %>
-	<div class="history">
-		<div class="history-heading">
-			<h2>Discoveries</h2>
-		</div>
-		<div>
-			<% if (user.histories.length > 0) { %>
-				<% user.histories.forEach(function(history) { %>
-					<p>
-						<a href="/users/<%= user.id %>/histories/<%= history.id %>/movies/?page=1"">
-							<%= history.createdAt.toDateString() %>
-								<a href="/users/<%= user.id %>/histories/<%= history.id %>/delete">  (Delete) </a>
-						</a>
-					</p>
-					<hr>
-				<% }) %>
-			<% } else { %>
-				<h2>Nothing discovered yet...</h2>
-			<% } %>
-		</div>
-	</div>
-	<div>
-		<!-- <div class="profile">
-				<% if (user.avatar) { %>
-						<img src="<%= user.avatar %>" alt="" class="avatar-profile">
+	<div class="history-container">
+
+		<div class="history">
+			<div class="history-heading">
+				<h2>Discoveries</h2>
+			</div>
+			<div>
+				<% if (user.histories.length > 0) { %>
+					<% user.histories.forEach(function(history) { %>
+						<p>
+							<a href="/users/<%= user.id %>/histories/<%= history.id %>/movies/?page=1"">
+								<%= history.createdAt.toDateString() %>
+									<a href="/users/<%= user.id %>/histories/<%= history.id %>/delete">  (Delete) </a>
+							</a>
+						</p>
+						<hr>
+					<% }) %>
 				<% } else { %>
-					<img class="avatar-profile">img</i>
+					<h2>Nothing discovered yet...</h2>
 				<% } %>
-		</div> -->
+			</div>
+		</div>
+
 	</div>
 
 <%- include('../partials/footer.ejs') %>
