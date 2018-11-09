@@ -255,15 +255,9 @@ nav li:hover{
 }
 
 .test-heading{
-<<<<<<< HEAD
-    background-color: #43a4dd;
-    text-align: center;
-    color: darkorange;
-=======
     margin-left: 1.5em;
     color: white;
     margin-top: 1em;
->>>>>>> 29127f70d46d67c1ebbaee36e86b15b260f4b272
 }
 
 .hidden-form{
