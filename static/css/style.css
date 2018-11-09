@@ -262,12 +262,9 @@ nav li:hover{
 }
 
 .test-heading{
-<<<<<<< HEAD
-=======
     background-color: #43a4dd;
     text-align: center;
     color: darkorange;
->>>>>>> f8ade1f162200507af0bd7359e3d7beb7963f6fd
     margin-left: 1.5em;
     color: white;
     margin-top: 1em;
@@ -299,4 +296,8 @@ nav li:hover{
 .imbd-logo{
     height: auto;
     width:  8em;
+}
+.tmbd-logo{
+    height: auto;
+    width: 8em;
 }
