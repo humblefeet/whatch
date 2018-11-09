@@ -43,6 +43,10 @@ function  selectImage(e){
         imageClickedTest.push(id)
         fiveClicks()
     }
+    if (genresSelected.length > 3){
+        submitButton.focus();
+    }
+    console.log({genresSelected, imageData})
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {

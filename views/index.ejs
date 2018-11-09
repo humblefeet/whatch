@@ -1,22 +1,23 @@
 <%- include('./partials/header.ejs') %>
-	<div id="intro-div">
+<% if (!user) { %>
+	<div id="intro-div" class="grey-image">
 		<div id="intro-text">
 			<h1>Welcome to wHatch!</h1>
 			<p>Login to get personal movie recommendations based on images you find appealing!</p>
 		</div>
 	</div>
-	<% if (user) { %>
-		<p>Below is a list of popular movies on <a href="https://www.themoviedb.org/">The Movie Database.</a></p>
-		<main class="movie-grid">
-			<div>
-				<% movies.forEach(function(movie) { %>
-					<% if (movie.poster_path) { %>
-						<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
-					<% } else { %>
-						<img src="/img/missing-poster.png" class="poster missing-poster">
-					<% } %>
-				<% })%>
-			</div>
-		</main>
-	<% } %>
+<% } else { %>
+	<h1 id="popular-movies">Popular movies from <a href="https://www.themoviedb.org/">The Movie Database.</a></h1>
+	<main class="movie-grid">
+		<div>
+			<% movies.forEach(function(movie) { %>
+				<% if (movie.poster_path) { %>
+					<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="poster">
+				<% } else { %>
+					<img src="/img/missing-poster.png" class="poster missing-poster">
+				<% } %>
+			<% })%>
+		</div>
+	</main>
+<% } %>
 <%- include('./partials/footer.ejs') %>

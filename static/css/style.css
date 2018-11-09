@@ -12,7 +12,8 @@ h2{
 body{
     margin: 0;
     background-color: rgb(34, 34, 34);
-    padding: 0;
+	padding: 0;
+	color: white;
 }
 button{
     width: 10%;
@@ -59,6 +60,13 @@ nav li:hover{
 
 }
 
+#popular-movies {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 40pt;
+	text-align: center;
+}
+
 #intro-div {
 	height: 100vh;
 	width: 100vw;
@@ -66,7 +74,6 @@ nav li:hover{
 	background-size: cover;
 	background-image: url('https://i.imgur.com/kLi0v0P.jpg');
 	text-align: center;
-	filter:grayscale(100%);
 	position: absolute;
 }
 
@@ -260,6 +267,9 @@ nav li:hover{
 }
 
 .test-heading{
+    background-color: #43a4dd;
+    text-align: center;
+    color: darkorange;
     margin-left: 1.5em;
     color: white;
     margin-top: 1em;
@@ -286,4 +296,9 @@ nav li:hover{
 
 .show-button{
     visibility: visible;
+}
+
+.imbd-logo{
+    height: auto;
+    width:  8em;
 }
