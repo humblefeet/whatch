@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 require('dotenv').config();
+=======
+require('dotenv').config()
+>>>>>>> 4328b44db5a867dbccfa7416fcef2db02695e6a9
 require('./database');
+
 var Image = require('../models/Image');
 var Genre = require('../models/Genre');
 
@@ -30,22 +35,47 @@ Promise.all([Image.deleteMany({}), Genre.deleteMany({})])
 
 .then(function(genres) {
 	return Image.create([
-		{genres: [genres[4]._id, genres[12]._id, genres[7]._id], url:'https://imgur.com/94VU72I.jpg'},
-		{genres: [genres[11]._id, genres[8]._id, genres[0]._id], url: 'https://i.imgur.com/JWLfBRn.jpg'},
-		{genres: [genres[16]._id, genres[2]._id], url: 'https://imgur.com/jeC17yw.jpg'},
-		{genres: [genres[12]._id, genres[9]._id], url:'https://imgur.com/4t8ftjP.jpg'},
-		{genres: [genres[6]._id, genres[5]._id], url:'https://imgur.com/Jo036UR.jpg'},
+		{genres: [genres[4]._id, genres[5]._id, genres[7]._id], url:'https://imgur.com/94VU72I.jpg'},
+		{genres: [genres[15]._id, genres[12]._id], url: 'https://imgur.com/jeC17yw.jpg'},
+		{genres: [genres[16]._id, genres[5]._id], url:'https://imgur.com/4t8ftjP.jpg'},
+		{genres: [genres[7]._id, genres[1]._id], url:'https://imgur.com/Jo036UR.jpg'},
 		{genres: [genres[3]._id, genres[4]._id], url:'https://i.imgur.com/r8yesVi.jpg'},
-		{genres: [genres[11]._id, genres[7]._id], url:'https://i.imgur.com/gOgueqR.jpg'},
-		{genres: [genres[15]._id, genres[0]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
+		{genres: [genres[11]._id, genres[5]._id], url:'https://i.imgur.com/gOgueqR.jpg'},
+		{genres: [genres[1]._id, genres[6]._id], url:'https://i.imgur.com/xXpRO8M.jpg'},
 		{genres: [genres[1]._id, genres[8]._id], url:'https://i.imgur.com/6C7rswj.jpg'},
 		{genres: [genres[7]._id, genres[3]._id], url:'https://i.imgur.com/PDEWvSd.jpg'},
 		{genres: [genres[14]._id, genres[8]._id], url:'https://i.imgur.com/qeRhrN3.jpg'},
+<<<<<<< HEAD
 		{genres: [genres[12]._id, genres[8]._id], url:'https://i.imgur.com/gbp2oqx.jpg'},
 		{genres: [genres[10]._id, genres[15]._id], url:'https://i.imgur.com/CfgC2PH.jpg'},
 		{genres: [genres[8]._id, genres[2]._id], url:'https://imgur.com/ALpAA31.jpg'},
 		{genres: [genres[7]._id, genres[6]._id], url:'https://imgur.com/Ba5QywC.jpg'},
 		{genres: [genres[15]._id, genres[6]._id], url:'https://i.imgur.com/SHFMbTJ.jpg'}
+=======
+		{genres: [genres[12]._id, genres[5]._id], url:'https://i.imgur.com/gbp2oqx.jpg'},
+		{genres: [genres[6]._id, genres[15]._id], url:'https://i.imgur.com/CfgC2PH.jpg'},
+		{genres: [genres[14]._id, genres[0]._id], url:'https:/imgur.com/ALpAA31.jpg'},
+		{genres: [genres[7]._id, genres[11]._id], url:'https://imgur.com/Ba5QywC.jpg'}, 
+		{genres: [genres[5]._id, genres[10]._id], url:'https://imgur.com/WKBP5Pz.jpg'}, //new added by matt
+		{genres: [genres[10]._id, genres[15]._id, genres[5]._id], url:'https://imgur.com/4Fk3IBK.jpg'},
+		{genres: [genres[6]._id, genres[14]._id], url:'https://imgur.com/NObUX6v.jpg'},
+		{genres: [genres[14]._id, genres[1]._id], url:'https://imgur.com/ZFAM90i.jpg'},
+		{genres: [genres[15]._id, genres[0]._id], url:'https://imgur.com/qzFvRLS.jpg'},
+		{genres: [genres[4]._id, genres[6]._id], url:'https://imgur.com/URgNeox.jpg'},
+		{genres: [genres[17]._id, genres[9]._id], url:'https://imgur.com/YZFb6SG.jpg'},
+		{genres: [genres[13]._id, genres[5]._id, genres[14]._id], url:'https://imgur.com/S3MMJf3.jpg'},
+		{genres: [genres[5]._id, genres[7]._id], url:'https://imgur.com/15qY667.jpg'},
+		{genres: [genres[6]._id, genres[7]._id], url:'https://imgur.com/GR64Cqy.jpg'},
+		{genres: [genres[6]._id, genres[16]._id], url:'https://imgur.com/zccZfE3.jpg'},
+		{genres: [genres[11]._id, genres[5]._id], url:'https://imgur.com/Qh12WMZ.jpg'},
+		{genres: [genres[17]._id, genres[9]._id], url:'https://imgur.com/xAwHuZu.jpg'},
+		{genres: [genres[9]._id, genres[13]._id], url:'https://imgur.com/MQmZfTo.jpg'},
+		{genres: [genres[13]._id, genres[9]._id], url:'https://imgur.com/V89niIS.jpg'},
+		{genres: [genres[3]._id, genres[7]._id], url:'https://imgur.com/Vj9s3wG.jpg'},
+		{genres: [genres[1]._id, genres[7]._id], url:'https://imgur.com/akbYAMP.jpg'},
+		{genres: [genres[0]._id, genres[3]._id], url:'https://imgur.com/FUIGTCB.jpg'}
+
+>>>>>>> 4328b44db5a867dbccfa7416fcef2db02695e6a9
 	])
 })
 
