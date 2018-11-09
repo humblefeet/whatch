@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Hind|Quicksand:700");
+
 a{
     text-decoration: none;
 }
@@ -8,7 +10,7 @@ h2{
 }
 body{
     margin: 0;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(34, 34, 34);
     padding: 0;
 }
 button{
@@ -67,11 +69,14 @@ nav li:hover{
     padding: 20px;
     padding-bottom: 40px;
     margin-bottom: 1em;
-    background-color: rgb(255, 253, 248)
+    border-bottom: 3px solid rgb(200, 200, 200);
+    /* background-color: rgb(255, 253, 248); */
 }
+
 .test-images{
     width: 100%;
-    margin-bottom: 40px;
+    margin-top: 40px; 
+    border-radius: 10px;
 }
 
 .test-images:hover{
@@ -216,7 +221,9 @@ nav li:hover{
 }
 
 .test-heading{
-    background-color: #43a4dd;
+    margin-left: 1.5em;
+    color: white;
+    margin-top: 1em;
 }
 
 .hidden-form{
