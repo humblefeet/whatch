@@ -1,20 +1,25 @@
 <%- include ../../partials/header.ejs %>
 <main class="show-container">
     <div class="movie-detail">
-		<h1><%= movie.title %></h1>
-		<h3>About This Movie</h3>
-		<p><%= movie.overview %></p>
-
-		<% if (providers.length > 0) { %>
-			<h3>Currently Streaming On</h3>
-			<% providers.forEach(function(provider) { %>
-				<a href="https://www.<%=provider%>.com/">
-					<div class="provider-icons <%= provider %>"></div>
-				</a>
-			<% }) %>
-		<% }else { %>
-			<h3>Not Currently Streaming On Netflix, Hulu, or Amazon</h3>
-		<%}%>	
+		<div>
+			<h1 class="history-heading"><%= movie.title %></h1>
+		</div>
+		<div class="movie-detail-sub">
+			<div class="syn-div">
+				<h3 class="synopsis-heading">Synopsis</h3>
+				<p class="synopsis"><%= movie.overview %></p>
+			</div>
+			<% if (providers.length > 0) { %>
+				<h3>Currently Streaming On</h3>
+				<% providers.forEach(function(provider) { %>
+					<a href="https://www.<%=provider%>.com/">
+						<div class="provider-icons <%= provider %>"></div>
+					</a>
+				<% }) %>
+			<% }else { %>
+				<h3>Not Currently Streaming On Netflix, Hulu, or Amazon</h3>
+			<%}%>	
+		</div>
     </div>
 	<img src="https://image.tmdb.org/t/p/w500/<%=movie.poster_path%>" class="detail-image" alt="movie image">
 
