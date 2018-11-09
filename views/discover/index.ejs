@@ -1,18 +1,18 @@
 <%- include ../partials/header.ejs %>
 	<div class="test-heading">
-		<h1 style="color: orange">let your eyes choose a movie</h1>
+		<h2>We recommend movies based on your choice of 5 photos.</h2>
 		
 	</div>
 	<div class="test-page">
 		<div class="polaroid">
-			<% images.forEach(function(image) { %>
-					<img data-genres="<%= image.genreIds %>" class="test-images" src="<%= image.url %>">
+			<% images.forEach(function(image, idx) { %>
+					<img data-id="<%=idx%>" data-genres="<%= image.genreIds %>" class="test-images" src="<%= image.url %>">
 			<% }) %>
 		</div>
 </div>
 
 <form method="POST" action="/users/<%= user._id %>/histories" id="historyForm">
-	<button id="submitButton">Submit Selections</button>
+	<button class="submitButton">Submit Selections</button>
 </form>
 
 
