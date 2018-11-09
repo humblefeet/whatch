@@ -17,7 +17,7 @@ require('./config/passport');
 // Define routes
 var index = require('./routes/index');
 var usersRouter = require('./routes/users');
-var testsRouter =  require('./routes/test');
+var discoverRouter =  require('./routes/discover');
 
 // create the Express app
 var app = express();
@@ -54,7 +54,7 @@ app.use(function(req, res, next) {
 // Mount our routes
 app.use('/', index);
 app.use('/users', usersRouter);
-app.use('/tests', testsRouter);
+app.use('/discover', discoverRouter);
 
 // Start the server listening for incoming requests
 app.listen(process.env.PORT || 3000);
