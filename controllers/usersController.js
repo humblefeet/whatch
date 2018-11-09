@@ -40,7 +40,6 @@ module.exports = {
 			}
 		})
 		var genres = newHistory.genres;
-		console.log(`${base_url}discover/movie${api_key}&with_genres=${genres}&page=${page}`)
 		axios.get(`${base_url}discover/movie${api_key}&with_genres=${genres}&page=${page}`)
 			.then(function(response) {
 				var movies = response.data.results;
