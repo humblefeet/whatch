@@ -4,7 +4,7 @@ whatch is a movie recommendation web application. Recommendations are created ba
 ![imgur](https://i.imgur.com/8nLXVTp.png)
 
 ## Technologies Used
-* Just Watch API
+* Just Watch API 
 * TMDb API
 * Node
 * Mongo
@@ -34,12 +34,7 @@ GET | /users/:id/histories/:hid/movies/:mid
 
 
 ## Unsolved Problems
-
-* We need to pool a large number of people to get accurate associations of film genres to photos.
-
-* In our discovery mode, we ran into a few problems in our click functions. One current problem is not allowing the user to go back on his or her choice of images once 5 images have been clicked. 
-
-* Small CSS styling fixes necessary. Clearing  floats are necessary on a late-added  footer feature.
+The image selection page doesn't allow you to deselect images once the 5th image is selected.
 
 ## Future Enhancements
 
